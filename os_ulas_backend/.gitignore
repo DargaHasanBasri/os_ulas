@@ -1,0 +1,30 @@
+# BINARY dosyalar
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# GO modülü derleme önbelleği
+/go.sum
+/vendor/
+
+# VS Code ayarları
+.vscode/
+
+# Test çıktıları
+*.log
+*.tmp
+
+# IDE / OS dosyaları
+.DS_Store
+*.swp
+
+# Ortam değişkenleri
+.env
+.env.*
+
+# Paket yönetim araçları (bazı özel araçlar için)
+node_modules/
