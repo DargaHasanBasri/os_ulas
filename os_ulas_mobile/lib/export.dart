@@ -1,3 +1,10 @@
 export 'package:flutter/material.dart';
+export 'package:flutter/services.dart';
+export 'package:gen/gen.dart';
+export 'package:os_ulas_mobile/utils/theme/custom_color_scheme.dart';
+export 'package:os_ulas_mobile/utils/extensions/string_localizations.dart';
+export 'package:os_ulas_mobile/base/enums/locales.dart';
+export 'package:os_ulas_mobile/base/initialize/app_start.dart';
+export 'package:os_ulas_mobile/base/initialize/app_localization.dart';
 export 'package:os_ulas_mobile/ui/screens/splash/splash_screen.dart';
 export 'package:os_ulas_mobile/ui/screens/home/home_screen.dart';
