@@ -1,7 +1,14 @@
+import 'package:easy_localization/easy_localization.dart';
+
 import 'export.dart';
 
-void main() {
-  runApp(const MyApp());
+Future<void> main() async{
+  await AppStart.init();
+  runApp(
+    AppLocalization(
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -12,10 +19,18 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'OsUlaş',
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+        colorScheme: CustomColorScheme.lightColorScheme,
       ),
-      home: HomeScreen(),
+      darkTheme: ThemeData(
+        useMaterial3: true,
+        colorScheme: CustomColorScheme.darkColorScheme,
+      ),
+      home: SplashScreen(),
     );
   }
 }
