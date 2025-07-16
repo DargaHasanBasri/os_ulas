@@ -6,8 +6,11 @@ class DashboardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: ColorName.eggSour,
       body: Center(
-        child: Text('Dashboard Screen'),
+        child: Assets.lottie.animConfetti.lottie(
+          package: 'gen',
+        ),
       ),
     );
   }

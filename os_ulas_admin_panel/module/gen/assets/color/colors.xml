@@ -1,5 +1,29 @@
-<?xml version="1.0" encoding"utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
+    <color name="magnolia">#F5F6FA</color>
+    <color name="darkJungle">#202224</color>
+    <color name="quillGrey">#D5D5D5</color>
+    <color name="charcoalGrey">#404040</color>
+    <color name="davyGrey">#565656</color>
+    <color name="dodgerBlue">#4880FF</color>
+    <color name="redRibbon">#EA0234</color>
+    <color name="iron">#D8D8D8</color>
+    <color name="artyClickBlue">#000AFF</color>
+    <color name="strongBlue">#4379EE</color>
+    <color name="greenBlue">#00B69B</color>
+    <color name="carbonGrey">#606060</color>
+    <color name="silverChalice">#ACACAC</color>
+    <color name="roseWhite">#FFF5F9</color>
+    <color name="lightningYellow">#FFBB38</color>
+    <color name="rosa">#FF82AC</color>
+    <color name="carouselPink">#FFE0EB</color>
+    <color name="eggSour">#FFF5D9</color>
+    <color name="foam">#DCFAF8</color>
+    <color name="aquaBlue">#16DBCC</color>
+    <color name="seashell">#F0F0F0</color>
+    <color name="mediumGrey">#7E7E7E</color>
+    <color name="shipGrey">#3D3C42</color>
+    <color name="greyCloud">#B5B7C0</color>
 </resources>
