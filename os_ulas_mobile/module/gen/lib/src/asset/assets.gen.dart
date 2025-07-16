@@ -13,11 +13,76 @@ import 'package:lottie/lottie.dart' as _lottie;
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/ic_back_arrow.png
+  AssetGenImage get icBackArrow =>
+      const AssetGenImage('assets/icons/ic_back_arrow.png');
+
+  /// File path: assets/icons/ic_bus.png
+  AssetGenImage get icBus => const AssetGenImage('assets/icons/ic_bus.png');
+
+  /// File path: assets/icons/ic_camera.png
+  AssetGenImage get icCamera =>
+      const AssetGenImage('assets/icons/ic_camera.png');
+
+  /// File path: assets/icons/ic_check_circle.png
+  AssetGenImage get icCheckCircle =>
+      const AssetGenImage('assets/icons/ic_check_circle.png');
+
+  /// File path: assets/icons/ic_down_arrow.png
+  AssetGenImage get icDownArrow =>
+      const AssetGenImage('assets/icons/ic_down_arrow.png');
+
+  /// File path: assets/icons/ic_down_drop_down_arrow.png
+  AssetGenImage get icDownDropDownArrow =>
+      const AssetGenImage('assets/icons/ic_down_drop_down_arrow.png');
+
   /// File path: assets/icons/ic_error.png
   AssetGenImage get icError => const AssetGenImage('assets/icons/ic_error.png');
 
+  /// File path: assets/icons/ic_feed_back.png
+  AssetGenImage get icFeedBack =>
+      const AssetGenImage('assets/icons/ic_feed_back.png');
+
+  /// File path: assets/icons/ic_filter.png
+  AssetGenImage get icFilter =>
+      const AssetGenImage('assets/icons/ic_filter.png');
+
+  /// File path: assets/icons/ic_location.png
+  AssetGenImage get icLocation =>
+      const AssetGenImage('assets/icons/ic_location.png');
+
+  /// File path: assets/icons/ic_lock.png
+  AssetGenImage get icLock => const AssetGenImage('assets/icons/ic_lock.png');
+
+  /// File path: assets/icons/ic_refresh.png
+  AssetGenImage get icRefresh =>
+      const AssetGenImage('assets/icons/ic_refresh.png');
+
+  /// File path: assets/icons/ic_right_error_arrow.png
+  AssetGenImage get icRightErrorArrow =>
+      const AssetGenImage('assets/icons/ic_right_error_arrow.png');
+
+  /// File path: assets/icons/ic_search.png
+  AssetGenImage get icSearch =>
+      const AssetGenImage('assets/icons/ic_search.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [icError];
+  List<AssetGenImage> get values => [
+    icBackArrow,
+    icBus,
+    icCamera,
+    icCheckCircle,
+    icDownArrow,
+    icDownDropDownArrow,
+    icError,
+    icFeedBack,
+    icFilter,
+    icLocation,
+    icLock,
+    icRefresh,
+    icRightErrorArrow,
+    icSearch,
+  ];
 }
 
 class $AssetsImagesGen {

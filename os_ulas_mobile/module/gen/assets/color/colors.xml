@@ -1,5 +1,19 @@
-<?xml version="1.0" encoding"utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
+    <color name="purpleBlue">#613EEA</color>
+    <color name="blush">#F0A58E</color>
+    <color name="paleSky">#6B7280</color>
+    <color name="mirage">#111827</color>
+    <color name="aquaHaze">#F3F3F3</color>
+    <color name="grey">#989692</color>
+    <color name="silver">#CACACA</color>
+    <color name="smokeyGrey">#6C7072</color>
+    <color name="rockBlue">#9DB2CE</color>
+    <color name="darkMint">#34C759</color>
+    <color name="santaGrey">#9CA3AF</color>
+    <color name="redOrange">#FF3B30</color>
+    <color name="stormDust">#616161</color>
+    <color name="coldPurple">#A9A1C9</color>
 </resources>
