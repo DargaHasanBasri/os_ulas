@@ -18,6 +18,9 @@ dependencies:
   # State Management
   flutter_bloc: ^9.1.1
 
+  # Localization
+  easy_localization: ^3.0.7+1
+
   # Utilities
   hive: ^2.2.3
   image_picker: ^1.1.2
@@ -25,6 +28,10 @@ dependencies:
 
   # UI
   fl_chart: ^1.0.0
+
+  # code gen
+  gen:
+    path: module/gen
 
 dev_dependencies:
   flutter_test:
@@ -35,3 +42,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/langs/
