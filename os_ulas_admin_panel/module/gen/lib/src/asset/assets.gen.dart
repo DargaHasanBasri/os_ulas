@@ -13,22 +13,158 @@ import 'package:lottie/lottie.dart' as _lottie;
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/ic_add_stop.png
+  AssetGenImage get icAddStop =>
+      const AssetGenImage('assets/icons/ic_add_stop.png');
+
+  /// File path: assets/icons/ic_admin.png
+  AssetGenImage get icAdmin => const AssetGenImage('assets/icons/ic_admin.png');
+
+  /// File path: assets/icons/ic_arrow_down.png
+  AssetGenImage get icArrowDown =>
+      const AssetGenImage('assets/icons/ic_arrow_down.png');
+
+  /// File path: assets/icons/ic_dashboard.png
+  AssetGenImage get icDashboard =>
+      const AssetGenImage('assets/icons/ic_dashboard.png');
+
+  /// File path: assets/icons/ic_delete.png
+  AssetGenImage get icDelete =>
+      const AssetGenImage('assets/icons/ic_delete.png');
+
+  /// File path: assets/icons/ic_edit.png
+  AssetGenImage get icEdit => const AssetGenImage('assets/icons/ic_edit.png');
+
   /// File path: assets/icons/ic_error.png
   AssetGenImage get icError => const AssetGenImage('assets/icons/ic_error.png');
 
+  /// File path: assets/icons/ic_feedback.png
+  AssetGenImage get icFeedback =>
+      const AssetGenImage('assets/icons/ic_feedback.png');
+
+  /// File path: assets/icons/ic_filter.png
+  AssetGenImage get icFilter =>
+      const AssetGenImage('assets/icons/ic_filter.png');
+
+  /// File path: assets/icons/ic_go_map.png
+  AssetGenImage get icGoMap =>
+      const AssetGenImage('assets/icons/ic_go_map.png');
+
+  /// File path: assets/icons/ic_lines_list.png
+  AssetGenImage get icLinesList =>
+      const AssetGenImage('assets/icons/ic_lines_list.png');
+
+  /// File path: assets/icons/ic_notification.png
+  AssetGenImage get icNotification =>
+      const AssetGenImage('assets/icons/ic_notification.png');
+
+  /// File path: assets/icons/ic_play_store.png
+  AssetGenImage get icPlayStore =>
+      const AssetGenImage('assets/icons/ic_play_store.png');
+
+  /// File path: assets/icons/ic_refresh_filter.png
+  AssetGenImage get icRefreshFilter =>
+      const AssetGenImage('assets/icons/ic_refresh_filter.png');
+
+  /// File path: assets/icons/ic_search.png
+  AssetGenImage get icSearch =>
+      const AssetGenImage('assets/icons/ic_search.png');
+
+  /// File path: assets/icons/ic_settings.png
+  AssetGenImage get icSettings =>
+      const AssetGenImage('assets/icons/ic_settings.png');
+
+  /// File path: assets/icons/ic_stops_list.png
+  AssetGenImage get icStopsList =>
+      const AssetGenImage('assets/icons/ic_stops_list.png');
+
+  /// File path: assets/icons/ic_tick.png
+  AssetGenImage get icTick => const AssetGenImage('assets/icons/ic_tick.png');
+
+  /// File path: assets/icons/ic_total_active.png
+  AssetGenImage get icTotalActive =>
+      const AssetGenImage('assets/icons/ic_total_active.png');
+
+  /// File path: assets/icons/ic_total_bus_lines.png
+  AssetGenImage get icTotalBusLines =>
+      const AssetGenImage('assets/icons/ic_total_bus_lines.png');
+
+  /// File path: assets/icons/ic_total_bus_stops.png
+  AssetGenImage get icTotalBusStops =>
+      const AssetGenImage('assets/icons/ic_total_bus_stops.png');
+
+  /// File path: assets/icons/ic_total_requests.png
+  AssetGenImage get icTotalRequests =>
+      const AssetGenImage('assets/icons/ic_total_requests.png');
+
+  /// File path: assets/icons/ic_total_stops.png
+  AssetGenImage get icTotalStops =>
+      const AssetGenImage('assets/icons/ic_total_stops.png');
+
+  /// File path: assets/icons/ic_total_users.png
+  AssetGenImage get icTotalUsers =>
+      const AssetGenImage('assets/icons/ic_total_users.png');
+
+  /// File path: assets/icons/ic_trending.png
+  AssetGenImage get icTrending =>
+      const AssetGenImage('assets/icons/ic_trending.png');
+
+  /// File path: assets/icons/ic_users_list.png
+  AssetGenImage get icUsersList =>
+      const AssetGenImage('assets/icons/ic_users_list.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [icError];
+  List<AssetGenImage> get values => [
+    icAddStop,
+    icAdmin,
+    icArrowDown,
+    icDashboard,
+    icDelete,
+    icEdit,
+    icError,
+    icFeedback,
+    icFilter,
+    icGoMap,
+    icLinesList,
+    icNotification,
+    icPlayStore,
+    icRefreshFilter,
+    icSearch,
+    icSettings,
+    icStopsList,
+    icTick,
+    icTotalActive,
+    icTotalBusLines,
+    icTotalBusStops,
+    icTotalRequests,
+    icTotalStops,
+    icTotalUsers,
+    icTrending,
+    icUsersList,
+  ];
 }
 
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/img_directions.png
+  AssetGenImage get imgDirections =>
+      const AssetGenImage('assets/images/img_directions.png');
+
   /// File path: assets/images/img_loading.png
   AssetGenImage get imgLoading =>
       const AssetGenImage('assets/images/img_loading.png');
 
+  /// File path: assets/images/img_profile_examp.jpg
+  AssetGenImage get imgProfileExamp =>
+      const AssetGenImage('assets/images/img_profile_examp.jpg');
+
   /// List of all assets
-  List<AssetGenImage> get values => [imgLoading];
+  List<AssetGenImage> get values => [
+    imgDirections,
+    imgLoading,
+    imgProfileExamp,
+  ];
 }
 
 class $AssetsLottieGen {
