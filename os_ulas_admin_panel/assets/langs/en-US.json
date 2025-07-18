@@ -1,3 +1,12 @@
 {
-  "appTitle": "OsUlaş"
+  "appTitle": "OsUlaş",
+  "dashboardTitle": "Dashboard",
+  "metricCard": {
+    "totalUsers": "Total Users",
+    "totalBusLines": "Total Bus Lines",
+    "totalBusStops": "Total Bus Stops",
+    "totalRequestsDaily": "Total Requests Daily",
+    "statusMsgWeek": "From past week",
+    "statusMsgYesterday": "From yesterday"
+  }
 }

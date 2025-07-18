@@ -22,6 +22,9 @@ class ColorName {
   /// Color: #000000
   static const Color black = Color(0xFF000000);
 
+  /// Color: #FFF3D6
+  static const Color bleachWhite = Color(0xFFFFF3D6);
+
   /// Color: #606060
   static const Color carbonGrey = Color(0xFF606060);
 
@@ -52,8 +55,14 @@ class ColorName {
   /// Color: #B5B7C0
   static const Color greyCloud = Color(0xFFB5B7C0);
 
+  /// Color: #D9F7E8
+  static const Color iceBerg = Color(0xFFD9F7E8);
+
   /// Color: #D8D8D8
   static const Color iron = Color(0xFFD8D8D8);
+
+  /// Color: #E5E4FF
+  static const Color lavenderMist = Color(0xFFE5E4FF);
 
   /// Color: #FFBB38
   static const Color lightningYellow = Color(0xFFFFBB38);
@@ -63,6 +72,9 @@ class ColorName {
 
   /// Color: #7E7E7E
   static const Color mediumGrey = Color(0xFF7E7E7E);
+
+  /// Color: #FFDED1
+  static const Color peachSchnapps = Color(0xFFFFDED1);
 
   /// Color: #D5D5D5
   static const Color quillGrey = Color(0xFFD5D5D5);

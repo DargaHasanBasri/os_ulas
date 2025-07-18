@@ -33,8 +33,8 @@ class HeaderLayout extends StatelessWidget implements PreferredSizeWidget {
                   decoration: InputDecoration(
                     filled: true,
                     fillColor: Color(0xffF5F6FA),
-                    prefixIcon: Image.asset(
-                      'assets/search_ic.png',
+                    prefixIcon: Assets.icons.icSearch.image(
+                      package: 'gen',
                       color: Colors.black,
                       width: 16,
                       height: 16,
@@ -67,8 +67,8 @@ class HeaderLayout extends StatelessWidget implements PreferredSizeWidget {
         /// notifications button
         IconButton(
           onPressed: () {},
-          icon: Image.asset(
-            'assets/notification_ic.png',
+          icon: Assets.icons.icNotification.image(
+            package: 'gen',
             width: 24,
             height: 24,
           ),
@@ -90,7 +90,10 @@ class HeaderLayout extends StatelessWidget implements PreferredSizeWidget {
                   ),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(50),
-                    child: Image.asset("assets/profile.jpg", fit: BoxFit.cover),
+                    child: Assets.images.imgProfileExamp.image(
+                      package: 'gen',
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
 
