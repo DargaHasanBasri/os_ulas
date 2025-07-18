@@ -8,7 +8,7 @@ class DesktopScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffF5F6FA),
+      backgroundColor: ColorName.magnolia,
       body: Row(
         children: [
           Expanded(child: SideBar()),
@@ -22,10 +22,9 @@ class DesktopScreen extends StatelessWidget {
                 /// body
                 Expanded(
                   child: SingleChildScrollView(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 30,
-                      vertical: 16,
-                    ),
+                    padding:
+                        AppPaddings.xLargeHorizontal +
+                        AppPaddings.mediumVertical,
                     child: body ?? SizedBox(),
                   ),
                 ),

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import '../../../../export.dart';
 
 class SideBar extends StatelessWidget {
   const SideBar({super.key});
@@ -9,10 +9,10 @@ class SideBar extends StatelessWidget {
       shape: BeveledRectangleBorder(),
       child: Container(
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: ColorName.white,
           boxShadow: [
             BoxShadow(
-              color: Color(0xff000000).withValues(alpha: 0.25),
+              color: ColorName.black.withValues(alpha: 0.25),
               offset: Offset(0, 4),
               blurRadius: 4,
             ),
@@ -21,28 +21,28 @@ class SideBar extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              /// TODO: LOGO ADD
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 16),
+                padding: AppPaddings.mediumVertical,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "Your",
-                      style: TextStyle(
-                        color: Color(0xff202224),
+                      "Os",
+                      style: Theme.of(context).textTheme.displayLarge?.copyWith(
                         fontSize: 20,
                         fontWeight: FontWeight.w800,
                       ),
                     ),
-                    SizedBox(width: 8),
-
-                    /// Image.asset("assets/directons.png", width: 60, height: 60),
-                    SizedBox(width: 4),
+                    SizedBox(width: AppSizes.smallSize),
+                    Assets.images.imgDirections.image(
+                      width: AppSizes.appLogoSize,
+                      height: AppSizes.appLogoSize,
+                    ),
+                    SizedBox(width: AppSizes.xSmallSize),
                     Text(
-                      "Way",
-                      style: TextStyle(
-                        color: Color(0xff4880FF),
+                      "Ulaş",
+                      style: Theme.of(context).textTheme.displayLarge?.copyWith(
+                        color: ColorName.dodgerBlue,
                         fontSize: 20,
                         fontWeight: FontWeight.w800,
                       ),

@@ -8,10 +8,10 @@ class HeaderLayout extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      toolbarHeight: 80,
-      titleSpacing: 0,
-      backgroundColor: Color(0xffFFFFFF),
-      scrolledUnderElevation: 0,
+      toolbarHeight: AppSizes.appBarHeight,
+      titleSpacing: AppSizes.appZero,
+      backgroundColor: ColorName.white,
+      scrolledUnderElevation: AppSizes.appZero,
 
       /// mobile menu
       leading: !DeviceUtility.isDesktopScreen(context)
@@ -25,33 +25,33 @@ class HeaderLayout extends StatelessWidget implements PreferredSizeWidget {
           /// search text form field
           DeviceUtility.isDesktopScreen(context)
           ? Padding(
-              padding: const EdgeInsets.only(left: 30),
+              padding: AppPaddings.xLargeLeft,
               child: SizedBox(
-                width: 400,
-                height: 40,
+                width: AppSizes.textFormWidth,
+                height: AppSizes.textFormHeight,
                 child: TextFormField(
                   decoration: InputDecoration(
                     filled: true,
-                    fillColor: Color(0xffF5F6FA),
+                    fillColor: ColorName.magnolia,
                     prefixIcon: Assets.icons.icSearch.image(
                       package: 'gen',
-                      color: Colors.black,
-                      width: 16,
-                      height: 16,
+                      color: ColorName.black,
+                      width: AppSizes.mediumIconSize,
+                      height: AppSizes.mediumIconSize,
                     ),
                     prefixIconConstraints: BoxConstraints(
-                      maxWidth: 40,
-                      minWidth: 40,
+                      maxWidth: AppSizes.prefixIconSize,
+                      minWidth: AppSizes.prefixIconSize,
                     ),
                     hintText: 'Searching anything...',
-                    hintStyle: TextStyle(
-                      fontSize: 14,
-                      color: Color(0xff202224),
-                      fontWeight: FontWeight.w400,
-                    ),
+                    hintStyle: Theme.of(context).textTheme.headlineSmall
+                        ?.copyWith(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                        ),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(50),
-                      borderSide: BorderSide(color: Color(0xffD5D5D5)),
+                      borderSide: BorderSide(color: ColorName.quillGrey),
                     ),
                   ),
                 ),
@@ -69,15 +69,15 @@ class HeaderLayout extends StatelessWidget implements PreferredSizeWidget {
           onPressed: () {},
           icon: Assets.icons.icNotification.image(
             package: 'gen',
-            width: 24,
-            height: 24,
+            width: AppSizes.largeIconSize,
+            height: AppSizes.largeIconSize,
           ),
         ),
 
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 12),
+          padding: AppPaddings.mediumVertical,
           child: Container(
-            padding: EdgeInsets.all(8),
+            padding: AppPaddings.smallAll,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -100,29 +100,29 @@ class HeaderLayout extends StatelessWidget implements PreferredSizeWidget {
                 /// user info
                 if (!DeviceUtility.isMobileScreen(context))
                   Padding(
-                    padding: const EdgeInsets.only(left: 8, right: 30),
+                    padding: AppPaddings.smallLeft + AppPaddings.xLargeRight,
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
                           'Hello Hasansio',
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w700,
-                            overflow: TextOverflow.ellipsis,
-                            color: Color(0xff404040),
-                          ),
+                          style: Theme.of(context).textTheme.headlineLarge
+                              ?.copyWith(
+                                fontSize: 14,
+                                color: ColorName.charcoalGrey,
+                              ),
+                          overflow: TextOverflow.ellipsis,
                         ),
                         Expanded(
                           child: Text(
                             'Super Admin',
-                            style: TextStyle(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w600,
-                              overflow: TextOverflow.ellipsis,
-                              color: Color(0xff565656),
-                            ),
+                            style: Theme.of(context).textTheme.headlineMedium
+                                ?.copyWith(
+                                  fontSize: 12,
+                                  color: ColorName.davyGrey,
+                                ),
+                            overflow: TextOverflow.ellipsis,
                           ),
                         ),
                       ],
@@ -136,7 +136,6 @@ class HeaderLayout extends StatelessWidget implements PreferredSizeWidget {
     );
   }
 
-  /// TODO: appBarHeight = 56 yap
   @override
-  Size get preferredSize => Size.fromHeight(56 + 34);
+  Size get preferredSize => Size.fromHeight(AppSizes.appBarHeight);
 }

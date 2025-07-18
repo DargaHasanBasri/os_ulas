@@ -11,12 +11,12 @@ class TabletScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: Color(0xffF5F6FA),
+      backgroundColor: ColorName.magnolia,
       drawer: SideBar(),
       appBar: HeaderLayout(scaffoldKey: scaffoldKey),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(16),
+          padding: AppPaddings.mediumAll,
           child: body ?? SizedBox(),
         ),
       ),

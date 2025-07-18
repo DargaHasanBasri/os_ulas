@@ -8,13 +8,13 @@ class DashboardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SiteLayout(
-      desktop: desktopScreen(),
-      tablet: tabletScreen(),
-      mobile: mobileScreen(),
+      desktop: desktopScreen(context: context),
+      tablet: tabletScreen(context: context),
+      mobile: mobileScreen(context: context),
     );
   }
 
-  Widget desktopScreen() {
+  Widget desktopScreen({required BuildContext context}) {
     final now = DateTime.now();
     final List<(DateTime, double)> chartData = List.generate(14, (index) {
       final date = now.subtract(Duration(days: 13 - index));
@@ -114,11 +114,7 @@ class DashboardScreen extends StatelessWidget {
                 padding: AppPaddings.xLargeBottom,
                 child: Text(
                   LocaleKeys.metricCard_totalUsers.locale,
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.w700,
-                    color: ColorName.darkJungle,
-                  ),
+                  style: Theme.of(context).textTheme.bodyLarge,
                 ),
               ),
               AspectRatio(
@@ -135,7 +131,7 @@ class DashboardScreen extends StatelessWidget {
     );
   }
 
-  Widget tabletScreen() {
+  Widget tabletScreen({required BuildContext context}) {
     final now = DateTime.now();
     final List<(DateTime, double)> chartData = List.generate(14, (index) {
       final date = now.subtract(Duration(days: 13 - index));
@@ -147,11 +143,7 @@ class DashboardScreen extends StatelessWidget {
       children: [
         Text(
           LocaleKeys.dashboardTitle.locale,
-          style: TextStyle(
-            color: ColorName.darkJungle,
-            fontSize: 32,
-            fontWeight: FontWeight.w700,
-          ),
+          style: Theme.of(context).textTheme.bodyLarge,
         ),
         Padding(
           padding: AppPaddings.mediumTop,
@@ -243,11 +235,7 @@ class DashboardScreen extends StatelessWidget {
                 padding: AppPaddings.xLargeBottom,
                 child: Text(
                   LocaleKeys.metricCard_totalUsers.locale,
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.w700,
-                    color: ColorName.darkJungle,
-                  ),
+                  style: Theme.of(context).textTheme.displayLarge,
                 ),
               ),
               AspectRatio(
@@ -264,7 +252,7 @@ class DashboardScreen extends StatelessWidget {
     );
   }
 
-  Widget mobileScreen() {
+  Widget mobileScreen({required BuildContext context}) {
     final now = DateTime.now();
     final List<(DateTime, double)> chartData = List.generate(14, (index) {
       final date = now.subtract(Duration(days: 13 - index));
@@ -278,11 +266,7 @@ class DashboardScreen extends StatelessWidget {
           padding: AppPaddings.mediumBottom,
           child: Text(
             LocaleKeys.dashboardTitle.locale,
-            style: TextStyle(
-              color: ColorName.darkJungle,
-              fontSize: 32,
-              fontWeight: FontWeight.w700,
-            ),
+            style: Theme.of(context).textTheme.bodyLarge,
           ),
         ),
         DashboardItem(
@@ -352,11 +336,7 @@ class DashboardScreen extends StatelessWidget {
                 padding: AppPaddings.xLargeBottom,
                 child: Text(
                   LocaleKeys.metricCard_totalUsers.locale,
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.w700,
-                    color: ColorName.darkJungle,
-                  ),
+                  style: Theme.of(context).textTheme.displayLarge,
                 ),
               ),
               AspectRatio(

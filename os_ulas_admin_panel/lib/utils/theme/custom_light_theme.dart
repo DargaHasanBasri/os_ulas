@@ -26,86 +26,86 @@ final class CustomLightTheme implements CustomTheme {
     /// Body light
     bodyLarge: TextStyle(
       fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontWeight: FontWeight.w700,
+      color: ColorName.darkJungle,
     ),
     bodyMedium: TextStyle(
       fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontWeight: FontWeight.w600,
+      color: ColorName.darkJungle,
     ),
     bodySmall: TextStyle(
       fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontWeight: FontWeight.w500,
+      color: ColorName.darkJungle,
     ),
 
     /// Display light
     displayLarge: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 24,
+      fontWeight: FontWeight.w700,
+      color: ColorName.darkJungle,
     ),
     displayMedium: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 24,
+      fontWeight: FontWeight.w600,
+      color: ColorName.darkJungle,
     ),
     displaySmall: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 24,
+      fontWeight: FontWeight.w500,
+      color: ColorName.darkJungle,
     ),
 
     /// Headline light
     headlineLarge: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 16,
+      fontWeight: FontWeight.w700,
+      color: ColorName.darkJungle,
     ),
     headlineMedium: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 16,
+      fontWeight: FontWeight.w600,
+      color: ColorName.darkJungle,
     ),
     headlineSmall: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 16,
+      fontWeight: FontWeight.w500,
+      color: ColorName.darkJungle,
     ),
 
     /// Label light
     labelLarge: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 8,
+      fontWeight: FontWeight.w700,
+      color: ColorName.darkJungle,
     ),
     labelMedium: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 8,
+      fontWeight: FontWeight.w600,
+      color: ColorName.darkJungle,
     ),
     labelSmall: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 8,
+      fontWeight: FontWeight.w500,
+      color: ColorName.darkJungle,
     ),
 
     /// Title light
     titleLarge: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 4,
+      fontWeight: FontWeight.w700,
+      color: ColorName.darkJungle,
     ),
     titleMedium: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 4,
+      fontWeight: FontWeight.w600,
+      color: ColorName.darkJungle,
     ),
     titleSmall: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 4,
+      fontWeight: FontWeight.w500,
+      color: ColorName.darkJungle,
     ),
   );
 }
