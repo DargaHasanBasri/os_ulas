@@ -47,20 +47,17 @@ class DashboardItem extends StatelessWidget {
                       itemTitle,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
-                      style: TextStyle(
-                        color: ColorName.darkJungle.withValues(alpha: 0.7),
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                      ),
+                      style: Theme.of(context).textTheme.headlineMedium
+                          ?.copyWith(
+                            color: ColorName.darkJungle.withValues(alpha: 0.7),
+                          ),
                     ),
                     SizedBox(height: 16),
                     Text(
                       totalCount.toString(),
-                      style: TextStyle(
-                        color: ColorName.darkJungle,
-                        fontSize: 28,
-                        fontWeight: FontWeight.w700,
-                      ),
+                      style: Theme.of(
+                        context,
+                      ).textTheme.displayLarge?.copyWith(fontSize: 28),
                     ),
                   ],
                 ),
@@ -88,21 +85,21 @@ class DashboardItem extends StatelessWidget {
               SizedBox(width: 10),
               Text(
                 percentile.toString(),
-                style: TextStyle(
-                  color: ColorName.greenBlue,
-                  fontSize: 16,
-                  fontWeight: FontWeight.w600,
-                ),
+                style:
+                    Theme.of(
+                      context,
+                    ).textTheme.headlineMedium?.copyWith(
+                      color: ColorName.greenBlue,
+                    ),
               ),
               Expanded(
                 child: Text(
                   " $itemMessage",
-                  style: TextStyle(
+                  style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                     color: ColorName.carbonGrey,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                    overflow: TextOverflow.ellipsis,
                   ),
+                  overflow: TextOverflow.ellipsis,
+                  maxLines: 1,
                 ),
               ),
             ],
