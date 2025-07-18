@@ -1,3 +1,12 @@
 {
-  "appTitle": "OsUlaş"
+  "appTitle": "OsUlaş",
+  "dashboardTitle": "Dashboard",
+  "metricCard": {
+    "totalUsers": "Toplam Kullanıcı",
+    "totalBusLines": "Toplam Otobüs Hattı",
+    "totalBusStops": "Toplam Otobüs Durağı",
+    "totalRequestsDaily": "Günlük İstek",
+    "statusMsgWeek": "Geçen haftaya göre",
+    "statusMsgYesterday": "Düne göre"
+  }
 }
