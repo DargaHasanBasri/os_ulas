@@ -35,6 +35,7 @@ class SideBar extends StatelessWidget {
                     ),
                     SizedBox(width: AppSizes.smallSize),
                     Assets.images.imgDirections.image(
+                      package: 'gen',
                       width: AppSizes.appLogoSize,
                       height: AppSizes.appLogoSize,
                     ),
