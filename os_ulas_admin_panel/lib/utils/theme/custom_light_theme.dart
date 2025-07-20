@@ -5,9 +5,12 @@ final class CustomLightTheme implements CustomTheme {
     useMaterial3: true,
     colorScheme: CustomColorScheme.lightColorScheme,
     scaffoldBackgroundColor: CustomColorScheme.lightColorScheme.primary,
-    fontFamily: 'PlusJakartaSans',
     appBarTheme: appBarTheme,
     textTheme: textTheme,
+    textSelectionTheme: const TextSelectionThemeData(
+      cursorColor: ColorName.darkJungle,
+      selectionColor: ColorName.aquaBlue,
+    ),
   );
 
   @override
@@ -22,7 +25,7 @@ final class CustomLightTheme implements CustomTheme {
   );
 
   @override
-  final TextTheme textTheme = const TextTheme(
+  final TextTheme textTheme = TextTheme(
     /// Body light
     bodyLarge: TextStyle(
       fontSize: 32,

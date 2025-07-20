@@ -1,4 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:os_ulas_admin_panel/utils/theme/custom_dark_theme.dart';
+import 'package:os_ulas_admin_panel/utils/theme/custom_light_theme.dart';
 import 'export.dart';
 
 Future<void> main() async {
@@ -21,14 +23,9 @@ class MyApp extends StatelessWidget {
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
-      theme: ThemeData(
-        useMaterial3: true,
-        colorScheme: CustomColorScheme.lightColorScheme,
-      ),
-      darkTheme: ThemeData(
-        useMaterial3: true,
-        colorScheme: CustomColorScheme.darkColorScheme,
-      ),
+      themeMode: ThemeMode.light,
+      theme: CustomLightTheme().themeData,
+      darkTheme: CustomDarkTheme().themeData,
       home: DashboardScreen(),
     );
   }

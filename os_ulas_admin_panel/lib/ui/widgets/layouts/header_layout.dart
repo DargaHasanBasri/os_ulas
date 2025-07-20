@@ -30,7 +30,9 @@ class HeaderLayout extends StatelessWidget implements PreferredSizeWidget {
                 width: AppSizes.textFormWidth,
                 height: AppSizes.textFormHeight,
                 child: TextFormField(
+                  style: Theme.of(context).textTheme.headlineSmall,
                   decoration: InputDecoration(
+                    contentPadding: AppPaddings.smallAll,
                     filled: true,
                     fillColor: ColorName.magnolia,
                     prefixIcon: Assets.icons.icSearch.image(
@@ -38,10 +40,6 @@ class HeaderLayout extends StatelessWidget implements PreferredSizeWidget {
                       color: ColorName.black,
                       width: AppSizes.mediumIconSize,
                       height: AppSizes.mediumIconSize,
-                    ),
-                    prefixIconConstraints: BoxConstraints(
-                      maxWidth: AppSizes.prefixIconSize,
-                      minWidth: AppSizes.prefixIconSize,
                     ),
                     hintText: 'Searching anything...',
                     hintStyle: Theme.of(context).textTheme.headlineSmall
