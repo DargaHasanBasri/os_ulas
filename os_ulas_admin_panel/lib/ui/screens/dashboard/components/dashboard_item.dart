@@ -65,6 +65,7 @@ class DashboardItem extends StatelessWidget {
               Flexible(
                 flex: 0,
                 child: Container(
+                  /// TODO: check the padding
                   padding: AppPaddings.mediumAll + AppPaddings.xXSmallVertical,
                   decoration: BoxDecoration(
                     color: itemIconBackgroundColor,

@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       theme: CustomLightTheme().themeData,
       darkTheme: CustomDarkTheme().themeData,
-      home: DashboardScreen(),
+      home: AdminsScreen(),
     );
   }
 }

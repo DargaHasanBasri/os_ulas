@@ -11,17 +11,17 @@ final class AppPaddings {
   static const xLargeAll = EdgeInsets.all(32);
 
   /// Vertical padding values
-  static const xXSmallHorizontal = EdgeInsets.symmetric(horizontal: 2);
-  static const xSmallHorizontal = EdgeInsets.symmetric(horizontal: 4);
-  static const smallHorizontal = EdgeInsets.symmetric(horizontal: 8);
+  static const xXSmallHorizontal = EdgeInsets.symmetric(horizontal: 4);
+  static const xSmallHorizontal = EdgeInsets.symmetric(horizontal: 8);
+  static const smallHorizontal = EdgeInsets.symmetric(horizontal: 12);
   static const mediumHorizontal = EdgeInsets.symmetric(horizontal: 16);
   static const largeHorizontal = EdgeInsets.symmetric(horizontal: 24);
   static const xLargeHorizontal = EdgeInsets.symmetric(horizontal: 32);
 
   /// Horizontal padding values
-  static const xXSmallVertical = EdgeInsets.symmetric(vertical: 2);
-  static const xSmallVertical = EdgeInsets.symmetric(vertical: 4);
-  static const smallVertical = EdgeInsets.symmetric(vertical: 8);
+  static const xXSmallVertical = EdgeInsets.symmetric(vertical: 4);
+  static const xSmallVertical = EdgeInsets.symmetric(vertical: 8);
+  static const smallVertical = EdgeInsets.symmetric(vertical: 12);
   static const mediumVertical = EdgeInsets.symmetric(vertical: 16);
   static const largeVertical = EdgeInsets.symmetric(vertical: 24);
   static const xLargeVertical = EdgeInsets.symmetric(vertical: 32);
@@ -46,6 +46,7 @@ final class AppPaddings {
   static const mediumLeft = EdgeInsets.only(left: 16);
   static const largeLeft = EdgeInsets.only(left: 24);
   static const xLargeLeft = EdgeInsets.only(left: 32);
+  static const xXLargeLeft = EdgeInsets.only(left: 64);
 
   /// Right padding values
   static const xSmallRight = EdgeInsets.only(right: 4);

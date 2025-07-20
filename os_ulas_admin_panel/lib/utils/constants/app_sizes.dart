@@ -16,16 +16,18 @@ final class AppSizes {
   static const int mobileScreenSize = 360;
 
   /// App Icons Sizes
-  static const double xSmallIconSize = 4.0;
-  static const double smallIconSize = 8.0;
+  static const double xXSmallIconSize = 4.0;
+  static const double xSmallIconSize = 8.0;
+  static const double smallIconSize = 12.0;
   static const double mediumIconSize = 16.0;
   static const double largeIconSize = 24.0;
   static const double xLargeIconSize = 32.0;
   static const double x2LargeIconSize = 64.0;
 
   /// sized Box size
-  static const double xSmallSize = 4;
-  static const double smallSize = 8;
+  static const double xXSmallSize = 4;
+  static const double xSmallSize = 8;
+  static const double smallSize = 12;
   static const double mediumSize = 16;
   static const double largeSize = 24;
   static const double xLargeSize = 32;
@@ -39,4 +41,7 @@ final class AppSizes {
 
   /// prefix icon size
   static const double prefixIconSize = 40;
+
+  /// vertical divider height
+  static const double verticalDividerHeight = 50;
 }
