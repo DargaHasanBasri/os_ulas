@@ -8,5 +8,24 @@
     "totalRequestsDaily": "Total Requests Daily",
     "statusMsgWeek": "From past week",
     "statusMsgYesterday": "From yesterday"
+  },
+  "filterTitle": {
+    "filterBy": "Filter By",
+    "alphabetical": "Alphabetical",
+    "dateTime": "Date Time",
+    "role": "Role",
+    "resetFilter": "Reset Filter"
+  },
+  "buttonTitle": {
+    "addNewAdmin": "Add New Admin"
+  },
+  "adminScreen": {
+    "mainTitle": "Admins",
+    "title1": "Admin ID",
+    "title2": "Admin Name",
+    "title3": "E-mail",
+    "title4": "Created Date",
+    "title5": "Admin Role",
+    "edit": "Edit"
   }
 }

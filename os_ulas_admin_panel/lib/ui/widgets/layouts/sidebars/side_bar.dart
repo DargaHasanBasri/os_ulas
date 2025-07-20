@@ -33,13 +33,13 @@ class SideBar extends StatelessWidget {
                         fontWeight: FontWeight.w800,
                       ),
                     ),
-                    SizedBox(width: AppSizes.smallSize),
+                    SizedBox(width: AppSizes.xSmallSize),
                     Assets.images.imgDirections.image(
                       package: 'gen',
                       width: AppSizes.appLogoSize,
                       height: AppSizes.appLogoSize,
                     ),
-                    SizedBox(width: AppSizes.xSmallSize),
+                    SizedBox(width: AppSizes.xXSmallSize),
                     Text(
                       "Ulaş",
                       style: Theme.of(context).textTheme.displayLarge?.copyWith(

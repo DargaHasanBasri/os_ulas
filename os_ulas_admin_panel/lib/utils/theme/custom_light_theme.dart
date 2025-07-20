@@ -73,40 +73,40 @@ final class CustomLightTheme implements CustomTheme {
     ),
     headlineSmall: TextStyle(
       fontSize: 16,
-      fontWeight: FontWeight.w500,
+      fontWeight: FontWeight.w400,
       color: ColorName.darkJungle,
     ),
 
     /// Label light
     labelLarge: TextStyle(
-      fontSize: 8,
+      fontSize: 14,
       fontWeight: FontWeight.w700,
       color: ColorName.darkJungle,
     ),
     labelMedium: TextStyle(
-      fontSize: 8,
+      fontSize: 14,
       fontWeight: FontWeight.w600,
       color: ColorName.darkJungle,
     ),
     labelSmall: TextStyle(
-      fontSize: 8,
+      fontSize: 14,
       fontWeight: FontWeight.w500,
       color: ColorName.darkJungle,
     ),
 
     /// Title light
     titleLarge: TextStyle(
-      fontSize: 4,
+      fontSize: 10,
       fontWeight: FontWeight.w700,
       color: ColorName.darkJungle,
     ),
     titleMedium: TextStyle(
-      fontSize: 4,
+      fontSize: 10,
       fontWeight: FontWeight.w600,
       color: ColorName.darkJungle,
     ),
     titleSmall: TextStyle(
-      fontSize: 4,
+      fontSize: 10,
       fontWeight: FontWeight.w500,
       color: ColorName.darkJungle,
     ),

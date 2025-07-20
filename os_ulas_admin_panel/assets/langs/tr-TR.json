@@ -8,5 +8,24 @@
     "totalRequestsDaily": "Günlük İstek",
     "statusMsgWeek": "Geçen haftaya göre",
     "statusMsgYesterday": "Düne göre"
+  },
+  "filterTitle": {
+    "filterBy": "Filtrele",
+    "alphabetical": "Alfabetik",
+    "dateTime": "Tarih",
+    "role": "Rol",
+    "resetFilter": "Filtreyi Sıfırla"
+  },
+  "buttonTitle": {
+    "addNewAdmin": "Yeni Admin Ekle"
+  },
+  "adminScreen": {
+    "mainTitle": "Adminler",
+    "title1": "Admin ID",
+    "title2": "Admin Adı",
+    "title3": "E-mail",
+    "title4": "Oluşturulma Tarihi",
+    "title5": "Admin Rolü",
+    "edit": "Düzenle"
   }
 }

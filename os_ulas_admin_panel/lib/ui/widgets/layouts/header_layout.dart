@@ -45,7 +45,6 @@ class HeaderLayout extends StatelessWidget implements PreferredSizeWidget {
                     hintStyle: Theme.of(context).textTheme.headlineSmall
                         ?.copyWith(
                           fontSize: 14,
-                          fontWeight: FontWeight.w400,
                         ),
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(50),
