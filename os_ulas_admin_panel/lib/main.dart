@@ -1,6 +1,4 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:os_ulas_admin_panel/utils/theme/custom_dark_theme.dart';
-import 'package:os_ulas_admin_panel/utils/theme/custom_light_theme.dart';
 import 'export.dart';
 
 Future<void> main() async {
@@ -17,7 +15,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'OsUlas Admin Paneli',
       localizationsDelegates: context.localizationDelegates,
@@ -26,7 +24,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       theme: CustomLightTheme().themeData,
       darkTheme: CustomDarkTheme().themeData,
-      home: AdminsScreen(),
+      routerConfig: AppRoutes.returnRouter(),
     );
   }
 }
