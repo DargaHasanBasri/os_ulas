@@ -29,6 +29,9 @@ dependencies:
   # UI
   fl_chart: ^1.0.0
 
+  # Router
+  go_router: ^16.0.0
+
   # code gen
   gen:
     path: module/gen
