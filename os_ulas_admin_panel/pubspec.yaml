@@ -25,6 +25,7 @@ dependencies:
   hive: ^2.2.3
   image_picker: ^1.1.2
   logger: ^2.6.0
+  equatable: ^2.0.7
 
   # UI
   fl_chart: ^1.0.0
@@ -39,6 +40,9 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+  # Test
+  bloc_test: ^10.0.0
 
   # Linter
   very_good_analysis: ^9.0.0
