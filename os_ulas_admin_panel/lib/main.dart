@@ -1,11 +1,20 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:os_ulas_admin_panel/viewmodel/sidebar/sidebar_cubit.dart';
 import 'export.dart';
 
 Future<void> main() async {
   await AppStart.init();
   runApp(
     AppLocalization(
-      child: const MyApp(),
+      child: MultiBlocProvider(
+        providers: [
+          BlocProvider<SidebarCubit>(
+            create: (_) => SidebarCubit(),
+          ),
+        ],
+        child: const MyApp(),
+      ),
     ),
   );
 }

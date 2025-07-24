@@ -1,6 +1,8 @@
+import 'package:os_ulas_admin_panel/ui/widgets/layouts/sidebars/components/side_bar_item.dart';
+import 'package:os_ulas_admin_panel/ui/widgets/layouts/sidebars/mixin/side_bar_mixin.dart';
 import '../../../../export.dart';
 
-class SideBar extends StatelessWidget {
+class SideBar extends StatelessWidget with SidebarItemsMixin {
   const SideBar({super.key});
 
   @override
@@ -49,6 +51,26 @@ class SideBar extends StatelessWidget {
                       ),
                     ),
                   ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
+                  children: sideBarItems
+                      .map(
+                        (item) => SideBarItem(
+                          index: item.index,
+                          itemName: item.itemName,
+                          iconBuilder: (showHighlight) =>
+                              item.iconBuilder(showHighlight),
+                          onTap: (context) {
+                             item.onTap(context);
+                          },
+                        ),
+                      )
+                      .toList(),
                 ),
               ),
             ],
