@@ -22,6 +22,13 @@ final class AppRoutes {
             return MaterialPage(child: AdminsScreen());
           },
         ),
+        GoRoute(
+          path: AppRouteNames.users,
+          name: AppRouteNames.users,
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return MaterialPage(child: UsersScreen());
+          },
+        ),
       ],
     );
   }

@@ -1,5 +1,4 @@
 import 'package:os_ulas_admin_panel/ui/screens/dashboard/components/dashboard_chart.dart';
-import 'package:os_ulas_admin_panel/ui/screens/dashboard/components/dashboard_item.dart';
 import '../../../export.dart';
 
 class DashboardScreen extends StatelessWidget {
@@ -31,7 +30,7 @@ class DashboardScreen extends StatelessWidget {
               Expanded(
                 child: Padding(
                   padding: AppPaddings.xLargeRight,
-                  child: DashboardItem(
+                  child: MetricCard(
                     itemTitle: LocaleKeys.metricCard_totalUsers.locale,
                     itemMessage:
                         LocaleKeys.metricCard_statusMsgYesterday.locale,
@@ -49,7 +48,7 @@ class DashboardScreen extends StatelessWidget {
               Expanded(
                 child: Padding(
                   padding: AppPaddings.mediumRight,
-                  child: DashboardItem(
+                  child: MetricCard(
                     itemTitle: LocaleKeys.metricCard_totalBusLines.locale,
                     itemMessage:
                         LocaleKeys.metricCard_statusMsgYesterday.locale,
@@ -67,7 +66,7 @@ class DashboardScreen extends StatelessWidget {
               Expanded(
                 child: Padding(
                   padding: AppPaddings.mediumLeft,
-                  child: DashboardItem(
+                  child: MetricCard(
                     itemTitle: LocaleKeys.metricCard_totalBusStops.locale,
                     itemMessage: LocaleKeys.metricCard_statusMsgWeek.locale,
                     itemIcon: Assets.icons.icTotalBusStops.image(
@@ -84,7 +83,7 @@ class DashboardScreen extends StatelessWidget {
               Expanded(
                 child: Padding(
                   padding: AppPaddings.xLargeLeft,
-                  child: DashboardItem(
+                  child: MetricCard(
                     itemTitle: LocaleKeys.metricCard_totalRequestsDaily.locale,
                     itemMessage: LocaleKeys.metricCard_statusMsgWeek.locale,
                     itemIcon: Assets.icons.icTotalRequests.image(
@@ -150,7 +149,7 @@ class DashboardScreen extends StatelessWidget {
           child: Row(
             children: [
               Expanded(
-                child: DashboardItem(
+                child: MetricCard(
                   itemTitle: LocaleKeys.metricCard_totalUsers.locale,
                   itemMessage: LocaleKeys.metricCard_statusMsgYesterday.locale,
                   itemIcon: Assets.icons.icTotalUsers.image(
@@ -166,7 +165,7 @@ class DashboardScreen extends StatelessWidget {
               Expanded(
                 child: Padding(
                   padding: AppPaddings.xLargeLeft,
-                  child: DashboardItem(
+                  child: MetricCard(
                     itemTitle: LocaleKeys.metricCard_totalBusLines.locale,
                     itemMessage:
                         LocaleKeys.metricCard_statusMsgYesterday.locale,
@@ -189,7 +188,7 @@ class DashboardScreen extends StatelessWidget {
           child: Row(
             children: [
               Expanded(
-                child: DashboardItem(
+                child: MetricCard(
                   itemTitle: LocaleKeys.metricCard_totalBusStops.locale,
                   itemMessage: LocaleKeys.metricCard_statusMsgWeek.locale,
                   itemIcon: Assets.icons.icTotalBusStops.image(
@@ -205,7 +204,7 @@ class DashboardScreen extends StatelessWidget {
               Expanded(
                 child: Padding(
                   padding: AppPaddings.xLargeLeft,
-                  child: DashboardItem(
+                  child: MetricCard(
                     itemTitle: LocaleKeys.metricCard_totalRequestsDaily.locale,
                     itemMessage: LocaleKeys.metricCard_statusMsgWeek.locale,
                     itemIcon: Assets.icons.icTotalRequests.image(
@@ -269,7 +268,7 @@ class DashboardScreen extends StatelessWidget {
             style: Theme.of(context).textTheme.bodyLarge,
           ),
         ),
-        DashboardItem(
+        MetricCard(
           itemTitle: LocaleKeys.metricCard_totalUsers.locale,
           itemMessage: LocaleKeys.metricCard_statusMsgYesterday.locale,
           itemIcon: Assets.icons.icTotalUsers.image(
@@ -283,7 +282,7 @@ class DashboardScreen extends StatelessWidget {
         ),
         Padding(
           padding: AppPaddings.mediumVertical,
-          child: DashboardItem(
+          child: MetricCard(
             itemTitle: LocaleKeys.metricCard_totalBusLines.locale,
             itemMessage: LocaleKeys.metricCard_statusMsgYesterday.locale,
             itemIcon: Assets.icons.icTotalBusLines.image(
@@ -296,7 +295,7 @@ class DashboardScreen extends StatelessWidget {
             percentile: 1.8,
           ),
         ),
-        DashboardItem(
+        MetricCard(
           itemTitle: LocaleKeys.metricCard_totalBusStops.locale,
           itemMessage: LocaleKeys.metricCard_statusMsgWeek.locale,
           itemIcon: Assets.icons.icTotalBusStops.image(
@@ -310,7 +309,7 @@ class DashboardScreen extends StatelessWidget {
         ),
         Padding(
           padding: AppPaddings.mediumVertical,
-          child: DashboardItem(
+          child: MetricCard(
             itemTitle: LocaleKeys.metricCard_totalRequestsDaily.locale,
             itemMessage: LocaleKeys.metricCard_statusMsgWeek.locale,
             itemIcon: Assets.icons.icTotalRequests.image(

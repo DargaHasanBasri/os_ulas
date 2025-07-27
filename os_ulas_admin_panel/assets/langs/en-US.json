@@ -1,11 +1,16 @@
 {
   "appTitle": "OsUlaş",
   "dashboardTitle": "Dashboard",
+  "search": "Search",
+  "edit": "Edit",
+  "delete": "Delete",
   "metricCard": {
     "totalUsers": "Total Users",
     "totalBusLines": "Total Bus Lines",
     "totalBusStops": "Total Bus Stops",
     "totalRequestsDaily": "Total Requests Daily",
+    "activeUser": "Active Now",
+    "totalDownloads": "Total Downloads",
     "statusMsgWeek": "From past week",
     "statusMsgYesterday": "From yesterday"
   },
@@ -17,7 +22,8 @@
     "resetFilter": "Reset Filter"
   },
   "buttonTitle": {
-    "addNewAdmin": "Add New Admin"
+    "addNewAdmin": "Add New Admin",
+    "addNewUser": "Add New User"
   },
   "adminScreen": {
     "mainTitle": "Admins",
@@ -26,6 +32,17 @@
     "title3": "E-mail",
     "title4": "Created Date",
     "title5": "Admin Role",
+    "edit": "Edit"
+  },
+  "userScreen": {
+    "mainTitle": "Users",
+    "sortBy": "Sort by",
+    "title1": "User ID",
+    "title2": "User Name",
+    "title3": "User E-mail",
+    "title4": "Created Date",
+    "title5": "Updated At",
+    "title6": "Verification",
     "edit": "Edit"
   }
 }

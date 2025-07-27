@@ -20,7 +20,7 @@ class AdminFilter extends StatelessWidget {
               height: AppSizes.largeIconSize,
             ),
           ),
-          DividerVertical(),
+          CustomDividerVertical(),
           Expanded(
             child: Text(
               LocaleKeys.filterTitle_filterBy.locale,
@@ -28,7 +28,7 @@ class AdminFilter extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ),
-          DividerVertical(),
+          CustomDividerVertical(),
           Expanded(
             flex: 2,
             child: buildFilterLabel(
@@ -41,7 +41,7 @@ class AdminFilter extends StatelessWidget {
               ),
             ),
           ),
-          DividerVertical(),
+          CustomDividerVertical(),
           Expanded(
             flex: 2,
             child: buildFilterLabel(
@@ -54,7 +54,7 @@ class AdminFilter extends StatelessWidget {
               ),
             ),
           ),
-          DividerVertical(),
+          CustomDividerVertical(),
           Expanded(
             flex: 2,
             child: buildFilterLabel(
@@ -67,7 +67,7 @@ class AdminFilter extends StatelessWidget {
               ),
             ),
           ),
-          DividerVertical(),
+          CustomDividerVertical(),
           Expanded(
             flex: 2,
             child: Row(

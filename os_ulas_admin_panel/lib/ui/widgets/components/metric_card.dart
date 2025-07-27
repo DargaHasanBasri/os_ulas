@@ -1,7 +1,7 @@
-import '../../../../export.dart';
+import '../../../export.dart';
 
-class DashboardItem extends StatelessWidget {
-  const DashboardItem({
+class MetricCard extends StatelessWidget {
+  const MetricCard({
     super.key,
     required this.itemTitle,
     required this.itemMessage,
@@ -85,7 +85,7 @@ class DashboardItem extends StatelessWidget {
               Assets.icons.icTrending.image(package: 'gen'),
               SizedBox(width: 10),
               Text(
-                percentile.toString(),
+                '%${percentile}',
                 style:
                     Theme.of(
                       context,

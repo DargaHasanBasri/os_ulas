@@ -34,14 +34,23 @@ final class AppSizes {
   static const double x2LargeSize = 64;
 
   /// header layout text form field width
-  static const double textFormWidth = 400;
+  static const double textFormHeaderWidth = 400;
 
   /// header layout text form field height
-  static const double textFormHeight = 40;
+  static const double textFormHeaderHeight = 40;
+
+  /// header layout text form field width
+  static const double textFormUsersWidth = 220;
+
+  /// header layout text form field height
+  static const double textFormUsersHeight = 40;
 
   /// prefix icon size
   static const double prefixIconSize = 40;
 
   /// vertical divider height
   static const double verticalDividerHeight = 50;
+
+  /// users list view height
+  static const double usersListHeight = 350;
 }
