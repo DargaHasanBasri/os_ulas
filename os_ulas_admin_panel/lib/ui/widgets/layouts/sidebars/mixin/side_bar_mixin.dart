@@ -45,7 +45,7 @@ mixin SidebarItemsMixin {
           color: showHighlight ? Colors.white : Colors.black,
         );
       },
-      onTap: (context) => context.go(AppRouteNames.admins),
+      onTap: (context) => context.go(AppRouteNames.users),
     ),
     SideBarMenuItemModel(
       index: 4,
@@ -56,7 +56,7 @@ mixin SidebarItemsMixin {
           color: showHighlight ? Colors.white : Colors.black,
         );
       },
-      onTap: (context) => context.go(AppRouteNames.dashboard),
+      onTap: (context) => context.go(AppRouteNames.admins),
     ),
     SideBarMenuItemModel(
       index: 5,

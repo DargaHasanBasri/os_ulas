@@ -7,6 +7,7 @@ final class CustomDarkTheme implements CustomTheme {
     scaffoldBackgroundColor: CustomColorScheme.darkColorScheme.primary,
     appBarTheme: appBarTheme,
     textTheme: textTheme,
+    scrollbarTheme: scrollbarTheme,
     textSelectionTheme: const TextSelectionThemeData(
       cursorColor: ColorName.white,
       selectionColor: ColorName.aquaBlue,
@@ -22,6 +23,14 @@ final class CustomDarkTheme implements CustomTheme {
     toolbarHeight: 80,
     scrolledUnderElevation: 0,
     centerTitle: true,
+  );
+
+  @override
+  final ScrollbarThemeData scrollbarTheme = ScrollbarThemeData(
+    thumbColor: WidgetStateProperty.all(ColorName.dodgerBlue),
+    trackColor: WidgetStateProperty.all(ColorName.carbonGrey),
+    thickness: WidgetStateProperty.all(8),
+    radius: Radius.circular(16),
   );
 
   @override

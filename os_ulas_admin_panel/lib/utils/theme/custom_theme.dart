@@ -6,4 +6,6 @@ abstract class CustomTheme {
   AppBarTheme get appBarTheme;
 
   TextTheme get textTheme;
+
+  ScrollbarThemeData get scrollbarTheme;
 }

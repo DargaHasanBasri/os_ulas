@@ -1,11 +1,16 @@
 {
   "appTitle": "OsUlaş",
   "dashboardTitle": "Dashboard",
+  "search": "Ara",
+  "edit": "Düzenle",
+  "delete": "Sil",
   "metricCard": {
     "totalUsers": "Toplam Kullanıcı",
     "totalBusLines": "Toplam Otobüs Hattı",
     "totalBusStops": "Toplam Otobüs Durağı",
     "totalRequestsDaily": "Günlük İstek",
+    "activeUser": "Şimdi Aktif",
+    "totalDownloads": "Toplam İnderdime",
     "statusMsgWeek": "Geçen haftaya göre",
     "statusMsgYesterday": "Düne göre"
   },
@@ -17,7 +22,8 @@
     "resetFilter": "Filtreyi Sıfırla"
   },
   "buttonTitle": {
-    "addNewAdmin": "Yeni Admin Ekle"
+    "addNewAdmin": "Yeni Admin Ekle",
+    "addNewUser": "Yeni Kullanıcı Ekle"
   },
   "adminScreen": {
     "mainTitle": "Adminler",
@@ -26,6 +32,17 @@
     "title3": "E-mail",
     "title4": "Oluşturulma Tarihi",
     "title5": "Admin Rolü",
+    "edit": "Düzenle"
+  },
+  "userScreen": {
+    "mainTitle": "Kullanıcılar",
+    "sortBy": "Sırala",
+    "title1": "Kullanıcı ID",
+    "title2": "Kullanıcı Adı",
+    "title3": "Kullanıcı E-mail",
+    "title4": "Oluşturulma Tarihi",
+    "title5": "Güncelleme Tarihi",
+    "title6": "Doğrulama",
     "edit": "Düzenle"
   }
 }

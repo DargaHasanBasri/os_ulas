@@ -17,7 +17,10 @@ class HeaderLayout extends StatelessWidget implements PreferredSizeWidget {
       leading: !DeviceUtility.isDesktopScreen(context)
           ? IconButton(
               onPressed: () => scaffoldKey?.currentState?.openDrawer(),
-              icon: Icon(Icons.menu),
+              icon: Icon(
+                Icons.menu,
+                color: ColorName.carbonGrey,
+              ),
             )
           : null,
 
@@ -27,8 +30,8 @@ class HeaderLayout extends StatelessWidget implements PreferredSizeWidget {
           ? Padding(
               padding: AppPaddings.xLargeLeft,
               child: SizedBox(
-                width: AppSizes.textFormWidth,
-                height: AppSizes.textFormHeight,
+                width: AppSizes.textFormHeaderWidth,
+                height: AppSizes.textFormHeaderHeight,
                 child: TextFormField(
                   style: Theme.of(context).textTheme.headlineSmall,
                   decoration: InputDecoration(
@@ -47,6 +50,10 @@ class HeaderLayout extends StatelessWidget implements PreferredSizeWidget {
                           fontSize: 14,
                         ),
                     border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(50),
+                      borderSide: BorderSide.none,
+                    ),
+                    focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(50),
                       borderSide: BorderSide(color: ColorName.quillGrey),
                     ),

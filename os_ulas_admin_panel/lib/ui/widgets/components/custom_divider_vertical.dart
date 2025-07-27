@@ -7,8 +7,8 @@ import '../../../export.dart';
 /// - Width: 1
 /// - Color: [ColorName.iron]
 
-class DividerVertical extends StatelessWidget {
-  const DividerVertical({
+class CustomDividerVertical extends StatelessWidget {
+  const CustomDividerVertical({
     super.key,
     this.height = AppSizes.verticalDividerHeight,
     this.width = 1,

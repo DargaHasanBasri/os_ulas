@@ -7,6 +7,7 @@ final class CustomLightTheme implements CustomTheme {
     scaffoldBackgroundColor: CustomColorScheme.lightColorScheme.primary,
     appBarTheme: appBarTheme,
     textTheme: textTheme,
+    scrollbarTheme: scrollbarTheme,
     textSelectionTheme: const TextSelectionThemeData(
       cursorColor: ColorName.darkJungle,
       selectionColor: ColorName.aquaBlue,
@@ -22,6 +23,14 @@ final class CustomLightTheme implements CustomTheme {
     toolbarHeight: 80,
     scrolledUnderElevation: 0,
     centerTitle: true,
+  );
+
+  @override
+  final ScrollbarThemeData scrollbarTheme = ScrollbarThemeData(
+    thumbColor: WidgetStateProperty.all(ColorName.dodgerBlue),
+    trackColor: WidgetStateProperty.all(ColorName.carbonGrey),
+    thickness: WidgetStateProperty.all(8),
+    radius: Radius.circular(16),
   );
 
   @override
@@ -96,17 +105,17 @@ final class CustomLightTheme implements CustomTheme {
 
     /// Title light
     titleLarge: TextStyle(
-      fontSize: 10,
+      fontSize: 12,
       fontWeight: FontWeight.w700,
       color: ColorName.darkJungle,
     ),
     titleMedium: TextStyle(
-      fontSize: 10,
+      fontSize: 12,
       fontWeight: FontWeight.w600,
       color: ColorName.darkJungle,
     ),
     titleSmall: TextStyle(
-      fontSize: 10,
+      fontSize: 12,
       fontWeight: FontWeight.w500,
       color: ColorName.darkJungle,
     ),
