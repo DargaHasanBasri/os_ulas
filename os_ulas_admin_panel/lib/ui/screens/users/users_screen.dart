@@ -28,16 +28,16 @@ class UsersScreen extends StatelessWidget {
                 child: Padding(
                   padding: AppPaddings.mediumRight,
                   child: MetricCard(
-                    itemTitle: LocaleKeys.metricCard_activeUser.locale,
-                    itemMessage: LocaleKeys.metricCard_statusMsgWeek.locale,
-                    itemIcon: Assets.icons.icTotalActive.image(
+                    title: LocaleKeys.metricCard_activeUser.locale,
+                    description: LocaleKeys.metricCard_statusMsgWeek.locale,
+                    iconImage: Assets.icons.icTotalActive.image(
                       package: 'gen',
                       width: AppSizes.xLargeIconSize,
                       height: AppSizes.xLargeIconSize,
                     ),
-                    itemIconBackgroundColor: ColorName.iceBerg,
+                    iconBackgroundColor: ColorName.iceBerg,
                     totalCount: 1506,
-                    percentile: 16,
+                    percentChange: 16,
                   ),
                 ),
               ),
@@ -45,16 +45,16 @@ class UsersScreen extends StatelessWidget {
                 child: Padding(
                   padding: AppPaddings.mediumHorizontal,
                   child: MetricCard(
-                    itemTitle: LocaleKeys.metricCard_totalUsers.locale,
-                    itemMessage: LocaleKeys.metricCard_statusMsgWeek.locale,
-                    itemIcon: Assets.icons.icTotalUsers.image(
+                    title: LocaleKeys.metricCard_totalUsers.locale,
+                    description: LocaleKeys.metricCard_statusMsgWeek.locale,
+                    iconImage: Assets.icons.icTotalUsers.image(
                       package: 'gen',
                       width: AppSizes.xLargeIconSize,
                       height: AppSizes.xLargeIconSize,
                     ),
-                    itemIconBackgroundColor: ColorName.lavenderMist,
+                    iconBackgroundColor: ColorName.lavenderMist,
                     totalCount: 40.689,
-                    percentile: 16,
+                    percentChange: 16,
                   ),
                 ),
               ),
@@ -62,18 +62,18 @@ class UsersScreen extends StatelessWidget {
                 child: Padding(
                   padding: AppPaddings.mediumLeft,
                   child: MetricCard(
-                    itemTitle: LocaleKeys.metricCard_totalDownloads.locale,
-                    itemMessage: LocaleKeys.metricCard_statusMsgWeek.locale,
-                    itemIcon: Assets.icons.icPlayStore.image(
+                    title: LocaleKeys.metricCard_totalDownloads.locale,
+                    description: LocaleKeys.metricCard_statusMsgWeek.locale,
+                    iconImage: Assets.icons.icPlayStore.image(
                       package: 'gen',
                       width: AppSizes.xLargeIconSize,
                       height: AppSizes.xLargeIconSize,
                     ),
-                    itemIconBackgroundColor: ColorName.iceBerg.withValues(
+                    iconBackgroundColor: ColorName.iceBerg.withValues(
                       alpha: 0.4,
                     ),
                     totalCount: 10293,
-                    percentile: 16,
+                    percentChange: 16,
                   ),
                 ),
               ),
@@ -114,16 +114,16 @@ class UsersScreen extends StatelessWidget {
         Column(
           children: [
             MetricCard(
-              itemTitle: LocaleKeys.metricCard_activeUser.locale,
-              itemMessage: LocaleKeys.metricCard_statusMsgWeek.locale,
-              itemIcon: Assets.icons.icTotalActive.image(
+              title: LocaleKeys.metricCard_activeUser.locale,
+              description: LocaleKeys.metricCard_statusMsgWeek.locale,
+              iconImage: Assets.icons.icTotalActive.image(
                 package: 'gen',
                 width: AppSizes.xLargeIconSize,
                 height: AppSizes.xLargeIconSize,
               ),
-              itemIconBackgroundColor: ColorName.iceBerg,
+              iconBackgroundColor: ColorName.iceBerg,
               totalCount: 1506,
-              percentile: 16,
+              percentChange: 16,
             ),
             Padding(
               padding: AppPaddings.mediumTop,
@@ -131,33 +131,33 @@ class UsersScreen extends StatelessWidget {
                 children: [
                   Expanded(
                     child: MetricCard(
-                      itemTitle: LocaleKeys.metricCard_totalUsers.locale,
-                      itemMessage: LocaleKeys.metricCard_statusMsgWeek.locale,
-                      itemIcon: Assets.icons.icTotalUsers.image(
+                      title: LocaleKeys.metricCard_totalUsers.locale,
+                      description: LocaleKeys.metricCard_statusMsgWeek.locale,
+                      iconImage: Assets.icons.icTotalUsers.image(
                         package: 'gen',
                         width: AppSizes.xLargeIconSize,
                         height: AppSizes.xLargeIconSize,
                       ),
-                      itemIconBackgroundColor: ColorName.lavenderMist,
+                      iconBackgroundColor: ColorName.lavenderMist,
                       totalCount: 40.689,
-                      percentile: 16,
+                      percentChange: 16,
                     ),
                   ),
                   SizedBox(width: AppSizes.largeSize),
                   Expanded(
                     child: MetricCard(
-                      itemTitle: LocaleKeys.metricCard_totalDownloads.locale,
-                      itemMessage: LocaleKeys.metricCard_statusMsgWeek.locale,
-                      itemIcon: Assets.icons.icPlayStore.image(
+                      title: LocaleKeys.metricCard_totalDownloads.locale,
+                      description: LocaleKeys.metricCard_statusMsgWeek.locale,
+                      iconImage: Assets.icons.icPlayStore.image(
                         package: 'gen',
                         width: AppSizes.xLargeIconSize,
                         height: AppSizes.xLargeIconSize,
                       ),
-                      itemIconBackgroundColor: ColorName.iceBerg.withValues(
+                      iconBackgroundColor: ColorName.iceBerg.withValues(
                         alpha: 0.4,
                       ),
                       totalCount: 10293,
-                      percentile: 16,
+                      percentChange: 16,
                     ),
                   ),
                 ],
@@ -175,7 +175,7 @@ class UsersScreen extends StatelessWidget {
             children: [
               /// screen title
               CustomScreenTitle(
-                textTitle: LocaleKeys.userScreen_mainTitle.locale,
+                title: LocaleKeys.userScreen_mainTitle.locale,
               ),
 
               /// add new users button
@@ -236,7 +236,7 @@ class UsersScreen extends StatelessWidget {
           children: [
             /// screen title
             CustomScreenTitle(
-              textTitle: LocaleKeys.userScreen_mainTitle.locale,
+              title: LocaleKeys.userScreen_mainTitle.locale,
             ),
 
             /// add new users button
@@ -268,45 +268,45 @@ class UsersScreen extends StatelessWidget {
             Padding(
               padding: AppPaddings.mediumVertical,
               child: MetricCard(
-                itemTitle: LocaleKeys.metricCard_activeUser.locale,
-                itemMessage: LocaleKeys.metricCard_statusMsgWeek.locale,
-                itemIcon: Assets.icons.icTotalActive.image(
+                title: LocaleKeys.metricCard_activeUser.locale,
+                description: LocaleKeys.metricCard_statusMsgWeek.locale,
+                iconImage: Assets.icons.icTotalActive.image(
                   package: 'gen',
                   width: AppSizes.xLargeIconSize,
                   height: AppSizes.xLargeIconSize,
                 ),
-                itemIconBackgroundColor: ColorName.iceBerg,
+                iconBackgroundColor: ColorName.iceBerg,
                 totalCount: 1506,
-                percentile: 16,
+                percentChange: 16,
               ),
             ),
             MetricCard(
-              itemTitle: LocaleKeys.metricCard_totalUsers.locale,
-              itemMessage: LocaleKeys.metricCard_statusMsgWeek.locale,
-              itemIcon: Assets.icons.icTotalUsers.image(
+              title: LocaleKeys.metricCard_totalUsers.locale,
+              description: LocaleKeys.metricCard_statusMsgWeek.locale,
+              iconImage: Assets.icons.icTotalUsers.image(
                 package: 'gen',
                 width: AppSizes.xLargeIconSize,
                 height: AppSizes.xLargeIconSize,
               ),
-              itemIconBackgroundColor: ColorName.lavenderMist,
+              iconBackgroundColor: ColorName.lavenderMist,
               totalCount: 40.689,
-              percentile: 16,
+              percentChange: 16,
             ),
             Padding(
               padding: AppPaddings.mediumVertical,
               child: MetricCard(
-                itemTitle: LocaleKeys.metricCard_totalDownloads.locale,
-                itemMessage: LocaleKeys.metricCard_statusMsgWeek.locale,
-                itemIcon: Assets.icons.icPlayStore.image(
+                title: LocaleKeys.metricCard_totalDownloads.locale,
+                description: LocaleKeys.metricCard_statusMsgWeek.locale,
+                iconImage: Assets.icons.icPlayStore.image(
                   package: 'gen',
                   width: AppSizes.xLargeIconSize,
                   height: AppSizes.xLargeIconSize,
                 ),
-                itemIconBackgroundColor: ColorName.iceBerg.withValues(
+                iconBackgroundColor: ColorName.iceBerg.withValues(
                   alpha: 0.4,
                 ),
                 totalCount: 10293,
-                percentile: 16,
+                percentChange: 16,
               ),
             ),
           ],
