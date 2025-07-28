@@ -3,20 +3,20 @@ import '../../../export.dart';
 class MetricCard extends StatelessWidget {
   const MetricCard({
     super.key,
-    required this.itemTitle,
-    required this.itemMessage,
-    required this.itemIcon,
-    required this.itemIconBackgroundColor,
+    required this.title,
+    required this.description,
+    required this.iconImage,
+    required this.iconBackgroundColor,
     required this.totalCount,
-    required this.percentile,
+    required this.percentChange,
   });
 
-  final String itemTitle;
-  final String itemMessage;
-  final Image itemIcon;
-  final Color itemIconBackgroundColor;
+  final String title;
+  final String description;
+  final Image iconImage;
+  final Color iconBackgroundColor;
   final double totalCount;
-  final double percentile;
+  final double percentChange;
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +44,7 @@ class MetricCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      itemTitle,
+                      title,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: Theme.of(context).textTheme.headlineMedium
@@ -68,12 +68,13 @@ class MetricCard extends StatelessWidget {
                   /// TODO: check the padding
                   padding: AppPaddings.mediumAll + AppPaddings.xXSmallVertical,
                   decoration: BoxDecoration(
-                    color: itemIconBackgroundColor,
+                    color: iconBackgroundColor,
                     borderRadius: BorderRadius.circular(24),
                   ),
                   child: FittedBox(
+                    key: const Key('metric_icon_image'),
                     fit: BoxFit.contain,
-                    child: itemIcon,
+                    child: iconImage,
                   ),
                 ),
               ),
@@ -82,10 +83,13 @@ class MetricCard extends StatelessWidget {
           SizedBox(height: 30),
           Row(
             children: [
-              Assets.icons.icTrending.image(package: 'gen'),
+              Assets.icons.icTrending.image(
+                key: const Key('metric_trending_icon'),
+                package: 'gen',
+              ),
               SizedBox(width: 10),
               Text(
-                '%${percentile}',
+                '%${percentChange}',
                 style:
                     Theme.of(
                       context,
@@ -95,7 +99,7 @@ class MetricCard extends StatelessWidget {
               ),
               Expanded(
                 child: Text(
-                  " $itemMessage",
+                  " $description",
                   style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                     color: ColorName.carbonGrey,
                   ),

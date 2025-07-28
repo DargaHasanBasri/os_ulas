@@ -49,7 +49,6 @@ class SideBarItem extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 24),
                     child: Material(
                       borderRadius: BorderRadius.circular(6),
-                      elevation: 0,
                       color: Colors.transparent,
                       child: InkWell(
                         borderRadius: BorderRadius.circular(6),

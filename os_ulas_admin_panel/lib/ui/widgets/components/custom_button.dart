@@ -8,8 +8,8 @@ class CustomButton extends StatelessWidget {
     this.onTap,
     this.height,
     this.backgroundColor = ColorName.dodgerBlue,
-    this.textColor,
     this.borderRadius = 8,
+    this.textStyle,
   });
 
   final String? title;
@@ -17,44 +17,57 @@ class CustomButton extends StatelessWidget {
   final VoidCallback? onTap;
   final double? height;
   final Color? backgroundColor;
-  final Color? textColor;
+  final TextStyle? textStyle;
   final double borderRadius;
 
   @override
   Widget build(BuildContext context) {
     final hasIcon = icon != null;
 
-    return GestureDetector(
-      onTap: () => onTap?.call(),
-      child: Container(
-        height: height,
-        padding: AppPaddings.largeHorizontal + AppPaddings.xSmallVertical,
-        decoration: BoxDecoration(
-          color: backgroundColor,
-          borderRadius: BorderRadius.circular(borderRadius),
-        ),
-        child: Row(
-          children: [
-            buttonTitle(context),
-            if (hasIcon)
-              Row(
-                children: [
-                  SizedBox(height: AppSizes.smallSize),
-                  icon!,
-                ],
-              ),
-          ],
+    return Material(
+      key: const Key('custom-button-material'),
+      borderRadius: BorderRadius.circular(borderRadius),
+      color: Colors.transparent,
+      child: InkWell(
+        key: const Key('custom-button-inkWell'),
+        borderRadius: BorderRadius.circular(borderRadius),
+        onTap: () => onTap?.call(),
+        child: Ink(
+          key: const Key('custom-button-ink'),
+          height: height,
+          padding: AppPaddings.largeHorizontal + AppPaddings.xSmallVertical,
+          decoration: BoxDecoration(
+            color: backgroundColor,
+            borderRadius: BorderRadius.circular(borderRadius),
+          ),
+          child: Row(
+            children: [
+              buttonTitle(context),
+              if (hasIcon)
+                Row(
+                  children: [
+                    SizedBox(height: AppSizes.smallSize),
+                    icon!,
+                  ],
+                ),
+            ],
+          ),
         ),
       ),
     );
   }
 
   Widget buttonTitle(BuildContext context) {
+    final defaultStyle =
+        textStyle ??
+        Theme.of(
+          context,
+        ).textTheme.labelMedium?.copyWith(
+          color: ColorName.white,
+        );
     return Text(
       title!,
-      style: Theme.of(
-        context,
-      ).textTheme.labelMedium?.copyWith(color: ColorName.white),
+      style: defaultStyle,
       textAlign: TextAlign.center,
     );
   }

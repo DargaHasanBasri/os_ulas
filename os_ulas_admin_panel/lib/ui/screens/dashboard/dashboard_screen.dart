@@ -31,17 +31,17 @@ class DashboardScreen extends StatelessWidget {
                 child: Padding(
                   padding: AppPaddings.xLargeRight,
                   child: MetricCard(
-                    itemTitle: LocaleKeys.metricCard_totalUsers.locale,
-                    itemMessage:
+                    title: LocaleKeys.metricCard_totalUsers.locale,
+                    description:
                         LocaleKeys.metricCard_statusMsgYesterday.locale,
-                    itemIcon: Assets.icons.icTotalUsers.image(
+                    iconImage: Assets.icons.icTotalUsers.image(
                       package: 'gen',
                       width: AppSizes.xLargeIconSize,
                       height: AppSizes.largeIconSize,
                     ),
-                    itemIconBackgroundColor: ColorName.lavenderMist,
+                    iconBackgroundColor: ColorName.lavenderMist,
                     totalCount: 40.689,
-                    percentile: 8.5,
+                    percentChange: 8.5,
                   ),
                 ),
               ),
@@ -49,17 +49,17 @@ class DashboardScreen extends StatelessWidget {
                 child: Padding(
                   padding: AppPaddings.mediumRight,
                   child: MetricCard(
-                    itemTitle: LocaleKeys.metricCard_totalBusLines.locale,
-                    itemMessage:
+                    title: LocaleKeys.metricCard_totalBusLines.locale,
+                    description:
                         LocaleKeys.metricCard_statusMsgYesterday.locale,
-                    itemIcon: Assets.icons.icTotalBusLines.image(
+                    iconImage: Assets.icons.icTotalBusLines.image(
                       package: 'gen',
                       width: AppSizes.xLargeIconSize,
                       height: AppSizes.largeIconSize,
                     ),
-                    itemIconBackgroundColor: ColorName.bleachWhite,
+                    iconBackgroundColor: ColorName.bleachWhite,
                     totalCount: 15,
-                    percentile: 1.8,
+                    percentChange: 1.8,
                   ),
                 ),
               ),
@@ -67,16 +67,16 @@ class DashboardScreen extends StatelessWidget {
                 child: Padding(
                   padding: AppPaddings.mediumLeft,
                   child: MetricCard(
-                    itemTitle: LocaleKeys.metricCard_totalBusStops.locale,
-                    itemMessage: LocaleKeys.metricCard_statusMsgWeek.locale,
-                    itemIcon: Assets.icons.icTotalBusStops.image(
+                    title: LocaleKeys.metricCard_totalBusStops.locale,
+                    description: LocaleKeys.metricCard_statusMsgWeek.locale,
+                    iconImage: Assets.icons.icTotalBusStops.image(
                       package: 'gen',
                       width: AppSizes.xLargeIconSize,
                       height: AppSizes.largeIconSize,
                     ),
-                    itemIconBackgroundColor: ColorName.peachSchnapps,
+                    iconBackgroundColor: ColorName.peachSchnapps,
                     totalCount: 40.689,
-                    percentile: 4.3,
+                    percentChange: 4.3,
                   ),
                 ),
               ),
@@ -84,16 +84,16 @@ class DashboardScreen extends StatelessWidget {
                 child: Padding(
                   padding: AppPaddings.xLargeLeft,
                   child: MetricCard(
-                    itemTitle: LocaleKeys.metricCard_totalRequestsDaily.locale,
-                    itemMessage: LocaleKeys.metricCard_statusMsgWeek.locale,
-                    itemIcon: Assets.icons.icTotalRequests.image(
+                    title: LocaleKeys.metricCard_totalRequestsDaily.locale,
+                    description: LocaleKeys.metricCard_statusMsgWeek.locale,
+                    iconImage: Assets.icons.icTotalRequests.image(
                       package: 'gen',
                       width: AppSizes.xLargeIconSize,
                       height: AppSizes.largeIconSize,
                     ),
-                    itemIconBackgroundColor: ColorName.iceBerg,
+                    iconBackgroundColor: ColorName.iceBerg,
                     totalCount: 10293,
-                    percentile: 1.3,
+                    percentChange: 1.3,
                   ),
                 ),
               ),
@@ -150,33 +150,33 @@ class DashboardScreen extends StatelessWidget {
             children: [
               Expanded(
                 child: MetricCard(
-                  itemTitle: LocaleKeys.metricCard_totalUsers.locale,
-                  itemMessage: LocaleKeys.metricCard_statusMsgYesterday.locale,
-                  itemIcon: Assets.icons.icTotalUsers.image(
+                  title: LocaleKeys.metricCard_totalUsers.locale,
+                  description: LocaleKeys.metricCard_statusMsgYesterday.locale,
+                  iconImage: Assets.icons.icTotalUsers.image(
                     package: 'gen',
                     width: AppSizes.xLargeIconSize,
                     height: AppSizes.largeIconSize,
                   ),
-                  itemIconBackgroundColor: ColorName.lavenderMist,
+                  iconBackgroundColor: ColorName.lavenderMist,
                   totalCount: 40.689,
-                  percentile: 8.5,
+                  percentChange: 8.5,
                 ),
               ),
               Expanded(
                 child: Padding(
                   padding: AppPaddings.xLargeLeft,
                   child: MetricCard(
-                    itemTitle: LocaleKeys.metricCard_totalBusLines.locale,
-                    itemMessage:
+                    title: LocaleKeys.metricCard_totalBusLines.locale,
+                    description:
                         LocaleKeys.metricCard_statusMsgYesterday.locale,
-                    itemIcon: Assets.icons.icTotalBusLines.image(
+                    iconImage: Assets.icons.icTotalBusLines.image(
                       package: 'gen',
                       width: AppSizes.xLargeIconSize,
                       height: AppSizes.largeIconSize,
                     ),
-                    itemIconBackgroundColor: ColorName.bleachWhite,
+                    iconBackgroundColor: ColorName.bleachWhite,
                     totalCount: 15,
-                    percentile: 1.8,
+                    percentChange: 1.8,
                   ),
                 ),
               ),
@@ -189,32 +189,32 @@ class DashboardScreen extends StatelessWidget {
             children: [
               Expanded(
                 child: MetricCard(
-                  itemTitle: LocaleKeys.metricCard_totalBusStops.locale,
-                  itemMessage: LocaleKeys.metricCard_statusMsgWeek.locale,
-                  itemIcon: Assets.icons.icTotalBusStops.image(
+                  title: LocaleKeys.metricCard_totalBusStops.locale,
+                  description: LocaleKeys.metricCard_statusMsgWeek.locale,
+                  iconImage: Assets.icons.icTotalBusStops.image(
                     package: 'gen',
                     width: AppSizes.xLargeIconSize,
                     height: AppSizes.largeIconSize,
                   ),
-                  itemIconBackgroundColor: ColorName.peachSchnapps,
+                  iconBackgroundColor: ColorName.peachSchnapps,
                   totalCount: 40.689,
-                  percentile: 4.3,
+                  percentChange: 4.3,
                 ),
               ),
               Expanded(
                 child: Padding(
                   padding: AppPaddings.xLargeLeft,
                   child: MetricCard(
-                    itemTitle: LocaleKeys.metricCard_totalRequestsDaily.locale,
-                    itemMessage: LocaleKeys.metricCard_statusMsgWeek.locale,
-                    itemIcon: Assets.icons.icTotalRequests.image(
+                    title: LocaleKeys.metricCard_totalRequestsDaily.locale,
+                    description: LocaleKeys.metricCard_statusMsgWeek.locale,
+                    iconImage: Assets.icons.icTotalRequests.image(
                       package: 'gen',
                       width: AppSizes.xLargeIconSize,
                       height: AppSizes.largeIconSize,
                     ),
-                    itemIconBackgroundColor: ColorName.iceBerg,
+                    iconBackgroundColor: ColorName.iceBerg,
                     totalCount: 10293,
-                    percentile: 1.3,
+                    percentChange: 1.3,
                   ),
                 ),
               ),
@@ -269,57 +269,57 @@ class DashboardScreen extends StatelessWidget {
           ),
         ),
         MetricCard(
-          itemTitle: LocaleKeys.metricCard_totalUsers.locale,
-          itemMessage: LocaleKeys.metricCard_statusMsgYesterday.locale,
-          itemIcon: Assets.icons.icTotalUsers.image(
+          title: LocaleKeys.metricCard_totalUsers.locale,
+          description: LocaleKeys.metricCard_statusMsgYesterday.locale,
+          iconImage: Assets.icons.icTotalUsers.image(
             package: 'gen',
             width: AppSizes.xLargeIconSize,
             height: AppSizes.largeIconSize,
           ),
-          itemIconBackgroundColor: ColorName.lavenderMist,
+          iconBackgroundColor: ColorName.lavenderMist,
           totalCount: 40.689,
-          percentile: 8.5,
+          percentChange: 8.5,
         ),
         Padding(
           padding: AppPaddings.mediumVertical,
           child: MetricCard(
-            itemTitle: LocaleKeys.metricCard_totalBusLines.locale,
-            itemMessage: LocaleKeys.metricCard_statusMsgYesterday.locale,
-            itemIcon: Assets.icons.icTotalBusLines.image(
+            title: LocaleKeys.metricCard_totalBusLines.locale,
+            description: LocaleKeys.metricCard_statusMsgYesterday.locale,
+            iconImage: Assets.icons.icTotalBusLines.image(
               package: 'gen',
               width: AppSizes.xLargeIconSize,
               height: AppSizes.largeIconSize,
             ),
-            itemIconBackgroundColor: ColorName.bleachWhite,
+            iconBackgroundColor: ColorName.bleachWhite,
             totalCount: 15,
-            percentile: 1.8,
+            percentChange: 1.8,
           ),
         ),
         MetricCard(
-          itemTitle: LocaleKeys.metricCard_totalBusStops.locale,
-          itemMessage: LocaleKeys.metricCard_statusMsgWeek.locale,
-          itemIcon: Assets.icons.icTotalBusStops.image(
+          title: LocaleKeys.metricCard_totalBusStops.locale,
+          description: LocaleKeys.metricCard_statusMsgWeek.locale,
+          iconImage: Assets.icons.icTotalBusStops.image(
             package: 'gen',
             width: AppSizes.xLargeIconSize,
             height: AppSizes.largeIconSize,
           ),
-          itemIconBackgroundColor: ColorName.peachSchnapps,
+          iconBackgroundColor: ColorName.peachSchnapps,
           totalCount: 40.689,
-          percentile: 4.3,
+          percentChange: 4.3,
         ),
         Padding(
           padding: AppPaddings.mediumVertical,
           child: MetricCard(
-            itemTitle: LocaleKeys.metricCard_totalRequestsDaily.locale,
-            itemMessage: LocaleKeys.metricCard_statusMsgWeek.locale,
-            itemIcon: Assets.icons.icTotalRequests.image(
+            title: LocaleKeys.metricCard_totalRequestsDaily.locale,
+            description: LocaleKeys.metricCard_statusMsgWeek.locale,
+            iconImage: Assets.icons.icTotalRequests.image(
               package: 'gen',
               width: AppSizes.xLargeIconSize,
               height: AppSizes.largeIconSize,
             ),
-            itemIconBackgroundColor: ColorName.iceBerg,
+            iconBackgroundColor: ColorName.iceBerg,
             totalCount: 10293,
-            percentile: 1.3,
+            percentChange: 1.3,
           ),
         ),
         Container(
