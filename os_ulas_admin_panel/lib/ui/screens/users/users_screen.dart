@@ -1,7 +1,8 @@
 import '../../../export.dart';
-import 'package:os_ulas_admin_panel/ui/screens/users/components/users_desktop_list_detail.dart';
-import 'package:os_ulas_admin_panel/ui/screens/users/components/users_search_filter.dart';
-import 'package:os_ulas_admin_panel/ui/screens/users/components/user_list_detail.dart';
+import 'components/user_list_detail.dart';
+import 'components/users_desktop_item.dart';
+import 'components/users_item_title.dart';
+import 'components/users_search_filter.dart';
 
 class UsersScreen extends StatelessWidget {
   const UsersScreen({super.key});
@@ -81,7 +82,7 @@ class UsersScreen extends StatelessWidget {
           ),
         ),
 
-        /// users list
+        /// lift of users
         Container(
           padding: AppPaddings.largeVertical + AppPaddings.xLargeHorizontal,
           decoration: BoxDecoration(
@@ -98,7 +99,22 @@ class UsersScreen extends StatelessWidget {
           child: Column(
             children: [
               UsersSearchFilter(),
-              UsersDesktopList(),
+              UsersItemTitle(),
+              SizedBox(
+                height: AppSizes.usersListHeight,
+                child: ListView.separated(
+                  itemCount: 20,
+                  itemBuilder: (context, index) {
+                    return UsersDesktopItem();
+                  },
+                  separatorBuilder: (context, index) {
+                    return Padding(
+                      padding: AppPaddings.smallVertical,
+                      child: CustomDividerHorizontal(),
+                    );
+                  },
+                ),
+              ),
             ],
           ),
         ),
@@ -213,7 +229,7 @@ class UsersScreen extends StatelessWidget {
               crossAxisCount: 2,
               crossAxisSpacing: 34,
               mainAxisSpacing: 24,
-              mainAxisExtent: 280,
+              mainAxisExtent: 320,
             ),
             itemCount: 15,
             itemBuilder: (context, index) {

@@ -20,6 +20,7 @@ class BusStopsScreen extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
+        /// statistics card
         Row(
           children: [
             Expanded(

@@ -79,6 +79,11 @@ class UsersSearchFilter extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(width: AppSizes.mediumSize),
+            CustomButton(
+              borderRadius: 16,
+              title: LocaleKeys.buttonTitle_addNewUser.locale,
+            ),
           ],
         ),
       ],
