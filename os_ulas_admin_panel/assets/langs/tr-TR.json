@@ -4,6 +4,7 @@
   "search": "Ara",
   "edit": "Düzenle",
   "delete": "Sil",
+  "viewDetails": "Detayları Gör",
   "metricCard": {
     "totalUsers": "Toplam Kullanıcı",
     "totalBusLines": "Toplam Otobüs Hattı",
@@ -44,5 +45,22 @@
     "title5": "Güncelleme Tarihi",
     "title6": "Doğrulama",
     "edit": "Düzenle"
+  },
+  "statisticsCard": {
+    "totalStops": "Toplam Durak",
+    "statusMsgStops": "toplam adet",
+    "goToMap": "Haritaya Git",
+    "statusMsgMaps": "Durakları haritada görüntüle",
+    "addStop": "Durak Ekle",
+    "statusMsgAddStop": "Yeni durak ekleyebilirsiniz"
+  },
+  "busStopsScreen": {
+    "mainTitle": "Otobüs Durakları",
+    "infoLabelTitle1": "Durak Adı",
+    "infoLabelTitle2": "Enlem Değeri",
+    "infoLabelTitle3": "Boylam Değeri",
+    "infoLabelTitle4": "Eklenme Tarihi",
+    "infoLabelTitle5": "Geçerlilik Tarihi",
+    "infoLabelTitle6": "Ekleyen Adı"
   }
 }

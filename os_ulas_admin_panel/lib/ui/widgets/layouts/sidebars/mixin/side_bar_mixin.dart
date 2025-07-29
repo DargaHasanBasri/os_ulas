@@ -23,7 +23,7 @@ mixin SidebarItemsMixin {
           color: showHighlight ? Colors.white : Colors.black,
         );
       },
-      onTap: (context) => context.go(AppRouteNames.admins),
+      onTap: (context) => context.go(AppRouteNames.busStops),
     ),
     SideBarMenuItemModel(
       index: 2,
