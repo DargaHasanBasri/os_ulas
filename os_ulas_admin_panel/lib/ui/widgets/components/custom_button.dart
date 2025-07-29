@@ -31,7 +31,7 @@ class CustomButton extends StatelessWidget {
       child: InkWell(
         key: const Key('custom-button-inkWell'),
         borderRadius: BorderRadius.circular(borderRadius),
-        onTap: () => onTap?.call(),
+        onTap: onTap != null ? () => onTap!.call() : null,
         child: Ink(
           key: const Key('custom-button-ink'),
           height: height,
@@ -41,6 +41,7 @@ class CustomButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(borderRadius),
           ),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               buttonTitle(context),
               if (hasIcon)

@@ -4,6 +4,7 @@
   "search": "Search",
   "edit": "Edit",
   "delete": "Delete",
+  "viewDetails": "View Details",
   "metricCard": {
     "totalUsers": "Total Users",
     "totalBusLines": "Total Bus Lines",
@@ -44,5 +45,22 @@
     "title5": "Updated At",
     "title6": "Verification",
     "edit": "Edit"
+  },
+  "statisticsCard": {
+    "totalStops": "Total Stops",
+    "statusMsgStops": "total so far",
+    "goToMap": "Go to Map",
+    "statusMsgMaps": "View stops on maps",
+    "addStop": "Add Stop",
+    "statusMsgAddStop": "You can add new stop"
+  },
+  "busStopsScreen": {
+    "mainTitle": "Bus Stops List",
+    "infoLabelTitle1": "Stop Name",
+    "infoLabelTitle2": "Latitude Value",
+    "infoLabelTitle3": "Longitude Value",
+    "infoLabelTitle4": "Added Date",
+    "infoLabelTitle5": "Validity Date",
+    "infoLabelTitle6": "Added by Name"
   }
 }

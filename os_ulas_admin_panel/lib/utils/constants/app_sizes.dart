@@ -53,4 +53,7 @@ final class AppSizes {
 
   /// users list view height
   static const double usersListHeight = 350;
+
+  /// app custom button height
+  static const double appButtonHeight = 40;
 }

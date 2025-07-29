@@ -29,6 +29,13 @@ final class AppRoutes {
             return MaterialPage(child: UsersScreen());
           },
         ),
+        GoRoute(
+          path: AppRouteNames.busStops,
+          name: AppRouteNames.busStops,
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return MaterialPage(child: BusStopsScreen());
+          },
+        ),
       ],
     );
   }
