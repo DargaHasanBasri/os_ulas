@@ -156,50 +156,18 @@ class UserListDetails extends StatelessWidget {
           ),
           Padding(
             padding: AppPaddings.mediumTop,
-            child: Row(
+            child: Column(
               children: [
-                Expanded(
-                  child: Container(
-                    padding:
-                        AppPaddings.xSmallVertical +
-                        AppPaddings.largeHorizontal,
-                    decoration: BoxDecoration(
-                      color: ColorName.dodgerBlue,
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: Text(
-                      LocaleKeys.edit.locale,
-                      style:
-                          Theme.of(
-                            context,
-                          ).textTheme.headlineLarge?.copyWith(
-                            color: ColorName.white,
-                          ),
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
+                CustomButton(
+                  height: AppSizes.appButtonHeight,
+                  title: LocaleKeys.viewDetails.locale,
+                  backgroundColor: ColorName.aquaBlue,
                 ),
-                SizedBox(width: AppSizes.largeSize),
-                Expanded(
-                  child: Container(
-                    padding:
-                        AppPaddings.xSmallVertical +
-                        AppPaddings.largeHorizontal,
-                    decoration: BoxDecoration(
-                      color: ColorName.dodgerBlue,
-                      borderRadius: BorderRadius.circular(8),
-                    ),
-                    child: Text(
-                      LocaleKeys.delete.locale,
-                      style:
-                          Theme.of(
-                            context,
-                          ).textTheme.headlineLarge?.copyWith(
-                            color: ColorName.white,
-                          ),
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
+                SizedBox(height: AppSizes.xSmallSize),
+                CustomButton(
+                  height: AppSizes.appButtonHeight,
+                  title: LocaleKeys.delete.locale,
+                  backgroundColor: ColorName.redRibbon.withValues(alpha: 0.8),
                 ),
               ],
             ),

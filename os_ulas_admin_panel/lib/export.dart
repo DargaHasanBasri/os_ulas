@@ -36,3 +36,4 @@ export 'package:os_ulas_admin_panel/ui/widgets/components/metric_card.dart';
 export 'package:os_ulas_admin_panel/ui/widgets/components/custom_screen_title.dart';
 export 'package:os_ulas_admin_panel/ui/widgets/components/statistics_card.dart';
 export 'package:os_ulas_admin_panel/utils/constants/app_constants.dart';
+export 'package:os_ulas_admin_panel/ui/widgets/components/custom_divider_horizontal.dart';
