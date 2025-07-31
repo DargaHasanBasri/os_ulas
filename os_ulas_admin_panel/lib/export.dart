@@ -37,3 +37,4 @@ export 'package:os_ulas_admin_panel/ui/widgets/components/custom_screen_title.da
 export 'package:os_ulas_admin_panel/ui/widgets/components/statistics_card.dart';
 export 'package:os_ulas_admin_panel/utils/constants/app_constants.dart';
 export 'package:os_ulas_admin_panel/ui/widgets/components/custom_divider_horizontal.dart';
+export 'package:os_ulas_admin_panel/ui/screens/bus_lines/bus_lines_screen.dart';
