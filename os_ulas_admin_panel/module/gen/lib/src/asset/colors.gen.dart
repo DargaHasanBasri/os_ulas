@@ -55,6 +55,9 @@ class ColorName {
   /// Color: #B5B7C0
   static const Color greyCloud = Color(0xFFB5B7C0);
 
+  /// Color: #D1D1D6
+  static const Color greyGoose = Color(0xFFD1D1D6);
+
   /// Color: #D9F7E8
   static const Color iceBerg = Color(0xFFD9F7E8);
 

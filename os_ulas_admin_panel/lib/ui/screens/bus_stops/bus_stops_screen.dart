@@ -75,8 +75,8 @@ class BusStopsScreen extends StatelessWidget {
 
         /// list of bus stops
         Container(
-          height: 480,
-          color: Colors.transparent,
+          height: 440,
+          color: ColorName.magnolia,
           child: ClipRRect(
             borderRadius: BorderRadius.circular(16),
             child: ListView.separated(
