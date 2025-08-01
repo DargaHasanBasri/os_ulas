@@ -6,4 +6,5 @@ final class AppRouteNames {
   static const String users = '/users';
   static const String busStops = '/busStops';
   static const String busLines = '/busLines';
+  static const String settings = '/settings';
 }

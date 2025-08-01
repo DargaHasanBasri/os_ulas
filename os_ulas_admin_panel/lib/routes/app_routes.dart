@@ -43,6 +43,13 @@ final class AppRoutes {
             return MaterialPage(child: BusLinesScreen());
           },
         ),
+        GoRoute(
+          path: AppRouteNames.settings,
+          name: AppRouteNames.settings,
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return MaterialPage(child: SettingsScreen());
+          },
+        ),
       ],
     );
   }

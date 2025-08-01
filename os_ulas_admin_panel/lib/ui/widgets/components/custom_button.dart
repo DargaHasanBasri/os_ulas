@@ -10,12 +10,14 @@ class CustomButton extends StatelessWidget {
     this.backgroundColor = ColorName.dodgerBlue,
     this.borderRadius = 8,
     this.textStyle,
+    this.width,
   });
 
   final String? title;
   final Image? icon;
   final VoidCallback? onTap;
   final double? height;
+  final double? width;
   final Color? backgroundColor;
   final TextStyle? textStyle;
   final double borderRadius;
@@ -35,6 +37,7 @@ class CustomButton extends StatelessWidget {
         child: Ink(
           key: const Key('custom-button-ink'),
           height: height,
+          width: width,
           padding: AppPaddings.smallHorizontal,
           decoration: BoxDecoration(
             color: backgroundColor,
