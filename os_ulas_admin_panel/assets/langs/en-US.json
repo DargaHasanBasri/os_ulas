@@ -62,5 +62,18 @@
     "infoLabelTitle4": "Added Date",
     "infoLabelTitle5": "Validity Date",
     "infoLabelTitle6": "Added by Name"
+  },
+  "addUserDesktopContent": {
+    "mainTitle": "You need to enter the required information to add a user.",
+    "subTitle": "Please do not leave the required fields blank.",
+    "name": "User Name",
+    "email": "User E-mail",
+    "password": "User Password",
+    "verification": "User Verification",
+    "hintTextName": "Enter your user name here",
+    "hintTextEmail": "Enter your user e-mail here",
+    "hintTextPassword": "Enter your user password here",
+    "verificationTrue": "Approved",
+    "verificationFalse": "Unapproved"
   }
 }

@@ -1,7 +1,9 @@
 import '../../../../export.dart';
 
-class UsersSearchFilter extends StatelessWidget {
-  const UsersSearchFilter({super.key});
+class UsersSearchFilterAdd extends StatelessWidget {
+  const UsersSearchFilterAdd({super.key, this.addUserOnTap});
+
+  final VoidCallback? addUserOnTap;
 
   @override
   Widget build(BuildContext context) {
@@ -14,6 +16,7 @@ class UsersSearchFilter extends StatelessWidget {
         ),
         Row(
           children: [
+            /// TextFormField
             SizedBox(
               width: AppSizes.textFormUsersWidth,
               height: AppSizes.textFormUsersHeight,
@@ -48,6 +51,8 @@ class UsersSearchFilter extends StatelessWidget {
               ),
             ),
             SizedBox(width: AppSizes.mediumSize),
+
+            /// filter
             Container(
               decoration: BoxDecoration(
                 color: ColorName.magnolia,
@@ -80,9 +85,12 @@ class UsersSearchFilter extends StatelessWidget {
               ),
             ),
             SizedBox(width: AppSizes.mediumSize),
+
+            /// button
             CustomButton(
-              borderRadius: 16,
-              title: LocaleKeys.buttonTitle_addNewUser.locale,
+              borderRadius: 8,
+              title: 'Kullanıcı Ekle',
+              onTap: addUserOnTap != null ? () => addUserOnTap!.call() : null,
             ),
           ],
         ),

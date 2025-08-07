@@ -38,6 +38,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_error.png
   AssetGenImage get icError => const AssetGenImage('assets/icons/ic_error.png');
 
+  /// File path: assets/icons/ic_exit.png
+  AssetGenImage get icExit => const AssetGenImage('assets/icons/ic_exit.png');
+
   /// File path: assets/icons/ic_feedback.png
   AssetGenImage get icFeedback =>
       const AssetGenImage('assets/icons/ic_feedback.png');
@@ -122,6 +125,7 @@ class $AssetsIconsGen {
     icDelete,
     icEdit,
     icError,
+    icExit,
     icFeedback,
     icFilter,
     icGoMap,

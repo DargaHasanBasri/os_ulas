@@ -1,8 +1,9 @@
 import '../../../export.dart';
+import 'components/desktop/add_user_desktop_content.dart';
 import 'components/user_list_detail.dart';
-import 'components/users_desktop_item.dart';
+import 'components/desktop/users_desktop_item.dart';
 import 'components/users_item_title.dart';
-import 'components/users_search_filter.dart';
+import 'components/users_search_filter_add.dart';
 
 class UsersScreen extends StatelessWidget {
   const UsersScreen({super.key});
@@ -83,39 +84,59 @@ class UsersScreen extends StatelessWidget {
         ),
 
         /// lift of users
-        Container(
-          padding: AppPaddings.largeVertical + AppPaddings.xLargeHorizontal,
-          decoration: BoxDecoration(
-            color: ColorName.white,
-            borderRadius: BorderRadius.circular(24),
-            boxShadow: [
-              BoxShadow(
-                color: ColorName.black.withValues(alpha: 0.05),
-                blurRadius: 54,
-                offset: Offset(6, 6),
-              ),
-            ],
-          ),
-          child: Column(
-            children: [
-              UsersSearchFilter(),
-              UsersItemTitle(),
-              SizedBox(
-                height: AppSizes.usersListHeight,
-                child: ListView.separated(
-                  itemCount: 20,
-                  itemBuilder: (context, index) {
-                    return UsersDesktopItem();
-                  },
-                  separatorBuilder: (context, index) {
-                    return Padding(
-                      padding: AppPaddings.smallVertical,
-                      child: CustomDividerHorizontal(),
+        BlocProvider(
+          create: (_) => VisibilityCubit(),
+          child: BlocBuilder<VisibilityCubit, bool>(
+            builder: (context, isVisible) {
+              return isVisible
+                  ? Container(
+                      padding:
+                          AppPaddings.largeVertical +
+                          AppPaddings.xLargeHorizontal,
+                      decoration: BoxDecoration(
+                        color: ColorName.white,
+                        borderRadius: BorderRadius.circular(24),
+                        boxShadow: [
+                          BoxShadow(
+                            color: ColorName.black.withValues(alpha: 0.05),
+                            blurRadius: 54,
+                            offset: Offset(6, 6),
+                          ),
+                        ],
+                      ),
+                      child: Column(
+                        children: [
+                          UsersSearchFilterAdd(
+                            addUserOnTap: () => context
+                                .read<VisibilityCubit>()
+                                .toggleVisibility(),
+                          ),
+                          UsersItemTitle(),
+                          SizedBox(
+                            height: AppSizes.usersListHeight,
+                            child: ListView.separated(
+                              itemCount: 20,
+                              itemBuilder: (context, index) {
+                                return UsersDesktopItem(
+                                  onTapTick: (isClick) {},
+                                );
+                              },
+                              separatorBuilder: (context, index) {
+                                return Padding(
+                                  padding: AppPaddings.smallVertical,
+                                  child: CustomDividerHorizontal(),
+                                );
+                              },
+                            ),
+                          ),
+                        ],
+                      ),
+                    )
+                  : AddUserDesktopContent(
+                      onTapExit: () =>
+                          context.read<VisibilityCubit>().toggleVisibility(),
                     );
-                  },
-                ),
-              ),
-            ],
+            },
           ),
         ),
       ],
