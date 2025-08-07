@@ -8,7 +8,9 @@ class CustomButton extends StatelessWidget {
     this.onTap,
     this.height = 30,
     this.backgroundColor = ColorName.dodgerBlue,
+    this.borderColor = Colors.transparent,
     this.borderRadius = 8,
+    this.borderWidth = 0,
     this.textStyle,
     this.width,
   });
@@ -19,6 +21,8 @@ class CustomButton extends StatelessWidget {
   final double? height;
   final double? width;
   final Color? backgroundColor;
+  final Color? borderColor;
+  final double? borderWidth;
   final TextStyle? textStyle;
   final double borderRadius;
 
@@ -38,10 +42,14 @@ class CustomButton extends StatelessWidget {
           key: const Key('custom-button-ink'),
           height: height,
           width: width,
-          padding: AppPaddings.smallHorizontal,
+          padding: AppPaddings.mediumHorizontal,
           decoration: BoxDecoration(
             color: backgroundColor,
             borderRadius: BorderRadius.circular(borderRadius),
+            border: Border.all(
+              color: borderColor!,
+              width: borderWidth!,
+            ),
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,

@@ -1,3 +1,4 @@
+import 'package:dynamic_path_url_strategy/dynamic_path_url_strategy.dart';
 import 'package:easy_localization/easy_localization.dart';
 import '../../export.dart';
 
@@ -9,6 +10,8 @@ class AppStart {
 
     /// Initializes the EasyLocalization library.
     await EasyLocalization.ensureInitialized();
+
+    setPathUrlStrategy();
 
     /// Sets the system interface style.
     /// Status bar color and screen brightness are specified.

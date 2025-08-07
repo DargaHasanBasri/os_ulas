@@ -62,5 +62,18 @@
     "infoLabelTitle4": "Eklenme Tarihi",
     "infoLabelTitle5": "Geçerlilik Tarihi",
     "infoLabelTitle6": "Ekleyen Adı"
+  },
+  "addUserDesktopContent": {
+    "mainTitle": "Kullanıcı eklemek için gerekli bilgileri girmeniz gerekmektedir.",
+    "subTitle": "Lütfen zorunlu alanları boş bırakmayınız.",
+    "name": "Kullanıcı Adı",
+    "email": "Kullanıcı E-mail",
+    "password": "Kullanıcı Parola",
+    "verification": "Kullanıcı Doğrulaması",
+    "hintTextName": "Kullanıcı adınızı buraya girin",
+    "hintTextEmail": "Kullanıcı e-postanızı buraya girin",
+    "hintTextPassword": "Kullanıcı şifrenizi buraya girin",
+    "verificationTrue": "Onaylanmış",
+    "verificationFalse": "Onaylanmamış"
   }
 }

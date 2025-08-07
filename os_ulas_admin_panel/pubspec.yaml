@@ -33,6 +33,8 @@ dependencies:
   # Router
   go_router: ^16.0.0
 
+  dynamic_path_url_strategy: ^1.0.0
+
   # code gen
   gen:
     path: module/gen

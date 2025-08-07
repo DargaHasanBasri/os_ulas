@@ -8,7 +8,7 @@ class CustomTextFormField extends StatelessWidget {
     this.hintText = '',
     this.hintTextStyle,
     this.borderRadius = 16,
-    this.focusedBorderColor = ColorName.quillGrey,
+    this.focusedBorderColor = ColorName.black,
     this.textFormTitle,
     this.textFormHeight = 36,
     this.textFormWidth,
@@ -70,7 +70,7 @@ class CustomTextFormField extends StatelessWidget {
   }
 
   TextStyle? _defaultHintTextStyle(BuildContext context) {
-    final defaultHintTextStyle = hintTextStyle != null
+    final defaultHintTextStyle = hintTextStyle == null
         ? Theme.of(
             context,
           ).textTheme.labelSmall?.copyWith(
@@ -89,14 +89,3 @@ class CustomTextFormField extends StatelessWidget {
     return contentPadding;
   }
 }
-
-/*
-Assets.icons.icSearch.image(
-          package: 'gen',
-          color: ColorName.black,
-          width: AppSizes.mediumIconSize,
-          height: AppSizes.mediumIconSize,
-        )
-        hintText
-        /// ${LocaleKeys.search.locale}...
- */
