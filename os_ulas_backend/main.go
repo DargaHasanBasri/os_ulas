@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"os_ulas_backend/config"
+	"os_ulas_backend/models"
 	"os_ulas_backend/routes"
 
 	"github.com/joho/godotenv"
@@ -18,7 +19,9 @@ func main() {
 	// Veritabanı bağlantısını kur
 	config.ConnectDatabase()
 	// Model yapısını veritabanında oluştur / güncelle
-	err = config.DB.AutoMigrate()
+	err = config.DB.AutoMigrate(
+		&models.User{},
+	)
 
 	if err != nil {
 		log.Fatalf("Veritabanı otomatik migrasyonu başarısız oldu: %v", err)
