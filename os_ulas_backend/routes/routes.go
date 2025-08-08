@@ -37,19 +37,19 @@ func SetupRouter() *gin.Engine {
 		userGroup.POST("/reset-password", handlers.ResetPasswordWithCode)
 
 		// Tüm kullanıcıları listeleme -> GET /user/all
-		///userGroup.GET("/all", handlers.GetAllUsers)
+		userGroup.GET("/all", handlers.GetAllUsers)
 
 		// ID ile tek kullanıcı bilgisi alma -> GET /user/:id
-		///userGroup.GET("/:id", handlers.GetUser)
+		userGroup.GET("/:id", handlers.GetUser)
 
 		// E-posta adresini güncelleme -> PUT /user/update-email
-		///userGroup.PUT("/update-email", handlers.UpdateEmail)
+		userGroup.PUT("/update-email", handlers.UpdateEmail)
 
 		// Şifreyi güncelleme -> PUT /user/update-password
-		///userGroup.PUT("/update-password", handlers.UpdatePassword)
+		userGroup.PUT("/update-password", handlers.UpdatePassword)
 
 		// Hesap silme -> DELETE /user/delete-account
-		///userGroup.DELETE("/delete-account", handlers.DeleteAccount)
+		userGroup.DELETE("/delete-account", handlers.DeleteAccount)
 	}
 
 	// Router nesnesi döndürülür
