@@ -21,20 +21,8 @@ func SetupRouter() *gin.Engine {
 		// Kullanıcı girişi -> POST /user/login
 		userGroup.POST("/login", handlers.Login)
 
-		// Tüm kullanıcıları listeleme -> GET /user/all
-		///userGroup.GET("/all", handlers.GetAllUsers)
-
-		// ID ile tek kullanıcı bilgisi alma -> GET /user/:id
-		///userGroup.GET("/:id", handlers.GetUser)
-
 		// E-posta doğrulama linki -> GET /user/verify-email
 		userGroup.GET("/verify-email", handlers.VerifyEmail)
-
-		// E-posta adresini güncelleme -> PUT /user/update-email
-		///userGroup.PUT("/update-email", handlers.UpdateEmail)
-
-		// Şifreyi güncelleme -> PUT /user/update-password
-		///userGroup.PUT("/update-password", handlers.UpdatePassword)
 
 		// Refresh token ile yeni access token alma -> POST /user/refresh-token
 		userGroup.POST("/refresh-token", handlers.RefreshToken)
@@ -43,10 +31,22 @@ func SetupRouter() *gin.Engine {
 		userGroup.POST("/logout", middlewares.AuthMiddleware(), handlers.Logout)
 
 		// Şifre sıfırlamak için e-posta kodu gönderme -> POST /user/send-reset-code
-		///userGroup.POST("/send-reset-code", handlers.SendResetCode)
+		userGroup.POST("/send-reset-code", handlers.SendResetCode)
 
 		// Kod ile şifre sıfırlama -> POST /user/reset-password
-		///userGroup.POST("/reset-password", handlers.ResetPasswordWithCode)
+		userGroup.POST("/reset-password", handlers.ResetPasswordWithCode)
+
+		// Tüm kullanıcıları listeleme -> GET /user/all
+		///userGroup.GET("/all", handlers.GetAllUsers)
+
+		// ID ile tek kullanıcı bilgisi alma -> GET /user/:id
+		///userGroup.GET("/:id", handlers.GetUser)
+
+		// E-posta adresini güncelleme -> PUT /user/update-email
+		///userGroup.PUT("/update-email", handlers.UpdateEmail)
+
+		// Şifreyi güncelleme -> PUT /user/update-password
+		///userGroup.PUT("/update-password", handlers.UpdatePassword)
 
 		// Hesap silme -> DELETE /user/delete-account
 		///userGroup.DELETE("/delete-account", handlers.DeleteAccount)
