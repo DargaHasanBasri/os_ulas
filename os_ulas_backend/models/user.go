@@ -44,10 +44,9 @@ type User struct {
 	IsVerified        bool   `json:"is_verified" gorm:"default:false"`
 	VerificationToken string `json:"-"` // JSON'da gösterilmesin
 
-	RefreshToken       string     `json:"-"` // JSON'da gözükmesin
-	RefreshTokenExpiry *time.Time `gorm:"column:refresh_token_expiry"`
-
-	VerificationEmailSentAt *time.Time `gorm:"column:verification_email_sent_at"`
+	RefreshToken            string     `json:"-"` // JSON'da gözükmesin
+	RefreshTokenExpiry      *time.Time `gorm:"column:refresh_token_expiry" json:"refresh_token_expiry"`
+	VerificationEmailSentAt *time.Time `gorm:"column:verification_email_sent_at" json:"verification_email_sent_at"`
 }
 
 // BeforeCreate GORM hook'u

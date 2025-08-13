@@ -7,7 +7,7 @@ part 'dev_env.g.dart';
 
 final class DevEnv implements AppEnv {
   @EnviedField(varName: 'BASE_URL')
-  static final String _baseUrl = DevEnv._baseUrl;
+  static final String _baseUrl = _DevEnv._baseUrl;
 
   @override
   String get baseUrl => _baseUrl;

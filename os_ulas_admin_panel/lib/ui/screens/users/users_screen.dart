@@ -1,3 +1,8 @@
+import 'package:os_ulas_admin_panel/models/user.dart';
+import 'package:os_ulas_admin_panel/services/dependency_setup_service/dependency_setup_service.dart';
+import 'package:os_ulas_admin_panel/ui/widgets/components/bloc_state_builder.dart';
+import 'package:os_ulas_admin_panel/viewmodel/users/users_cubit.dart';
+
 import '../../../export.dart';
 import 'components/desktop/add_user_desktop_content.dart';
 import 'components/user_list_detail.dart';
@@ -10,10 +15,13 @@ class UsersScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SiteLayout(
-      desktop: desktopScreen(context),
-      tablet: tabletScreen(context),
-      mobile: mobileScreen(context),
+    return BlocProvider(
+      create: (context) => getIt<UsersCubit>()..getAllUsers(),
+      child: SiteLayout(
+        desktop: desktopScreen(context),
+        tablet: tabletScreen(context),
+        mobile: mobileScreen(context),
+      ),
     );
   }
 
@@ -112,22 +120,29 @@ class UsersScreen extends StatelessWidget {
                                 .toggleVisibility(),
                           ),
                           UsersItemTitle(),
-                          SizedBox(
-                            height: AppSizes.usersListHeight,
-                            child: ListView.separated(
-                              itemCount: 20,
-                              itemBuilder: (context, index) {
-                                return UsersDesktopItem(
-                                  onTapTick: (isClick) {},
-                                );
-                              },
-                              separatorBuilder: (context, index) {
-                                return Padding(
-                                  padding: AppPaddings.smallVertical,
-                                  child: CustomDividerHorizontal(),
-                                );
-                              },
-                            ),
+                          BlocStateBuilder<List<User>>(
+                            cubit: context.read<UsersCubit>(),
+                            successBuilder: (users) {
+                              return SizedBox(
+                                height: AppSizes.usersListHeight,
+                                child: ListView.separated(
+                                  itemCount: users.length,
+                                  itemBuilder: (context, index) {
+                                    final user = users[index];
+                                    return UsersDesktopItem(
+                                      user: user, // User datasını geç
+                                      onTapTick: (isClick) {},
+                                    );
+                                  },
+                                  separatorBuilder: (context, index) {
+                                    return Padding(
+                                      padding: AppPaddings.smallVertical,
+                                      child: CustomDividerHorizontal(),
+                                    );
+                                  },
+                                ),
+                              );
+                            },
                           ),
                         ],
                       ),
