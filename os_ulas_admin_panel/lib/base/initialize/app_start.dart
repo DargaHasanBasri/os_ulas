@@ -1,4 +1,3 @@
-import 'package:dynamic_path_url_strategy/dynamic_path_url_strategy.dart';
 import 'package:easy_localization/easy_localization.dart';
 import '../../export.dart';
 
@@ -11,7 +10,11 @@ class AppStart {
     /// Initializes the EasyLocalization library.
     await EasyLocalization.ensureInitialized();
 
+    /// Sets the URL strategy. Removes the # character
     setPathUrlStrategy();
+
+    /// Initializes the application's dependencies and registers necessary services.
+    setupDependencies();
 
     /// Sets the system interface style.
     /// Status bar color and screen brightness are specified.

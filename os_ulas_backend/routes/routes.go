@@ -4,6 +4,7 @@ import (
 	handlers "os_ulas_backend/handlers/users"       // Kullanıcıya ait handler fonksiyonları (iş mantığı)
 	middlewares "os_ulas_backend/middlewares/users" // Kullanıcıya özel middleware'ler (örnek: Auth kontrolü)
 
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin" // Gin web framework
 )
 
@@ -11,6 +12,13 @@ import (
 func SetupRouter() *gin.Engine {
 	// Gin'in varsayılan router'ını oluşturur (logger ve recovery middleware'leri aktif)
 	r := gin.Default()
+
+	r.Use(cors.New(cors.Config{
+		AllowAllOrigins:  true, // Geliştirme için tüm origin'lere izin ver
+		AllowMethods:     []string{"GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH"},
+		AllowHeaders:     []string{"*"}, // Tüm header'lara izin ver
+		AllowCredentials: false,         // AllowAllOrigins true olduğunda false olmalı
+	}))
 
 	// Kullanıcı işlemlerini gruplayan bir route grubu oluşturulur
 	userGroup := r.Group("/user") // Tüm yollar /user ile başlayacak (örnek: /user/login)

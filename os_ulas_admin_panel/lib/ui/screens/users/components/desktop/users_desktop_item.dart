@@ -1,11 +1,13 @@
+import 'package:os_ulas_admin_panel/models/user.dart';
 import 'package:os_ulas_admin_panel/ui/widgets/components/custom_check_box.dart';
 import '../../../../../export.dart';
 import '../../../../../viewmodel/users/check_box_cubit.dart';
 
 class UsersDesktopItem extends StatelessWidget {
-  const UsersDesktopItem({super.key, this.onTapTick});
+  const UsersDesktopItem({super.key, this.onTapTick, required this.user});
 
   final void Function(bool isClick)? onTapTick;
+  final User user;
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +44,7 @@ class UsersDesktopItem extends StatelessWidget {
                       preferBelow: false,
                       verticalOffset: 12,
                       child: Text(
-                        AppConstants.exampleID.shortenId,
+                        user.id ?? '',
                         style: Theme.of(context).textTheme.labelSmall,
                         overflow: TextOverflow.clip,
                         maxLines: 1,

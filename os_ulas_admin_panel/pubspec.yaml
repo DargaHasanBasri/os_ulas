@@ -21,6 +21,10 @@ dependencies:
   # Localization
   easy_localization: ^3.0.7+1
 
+  http: ^1.5.0
+
+  get_it: ^8.2.0
+
   # Utilities
   hive: ^2.2.3
   image_picker: ^1.1.2
