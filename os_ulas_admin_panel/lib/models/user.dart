@@ -4,6 +4,7 @@ class User with EquatableMixin {
   final String? id;
   final String? name;
   final String? email;
+  final String? password;
   final DateTime? createdAt;
   final DateTime? updatedAt;
   final bool? isVerified;
@@ -14,6 +15,7 @@ class User with EquatableMixin {
     this.id,
     this.name,
     this.email,
+    this.password,
     this.createdAt,
     this.updatedAt,
     this.isVerified,
@@ -26,6 +28,7 @@ class User with EquatableMixin {
     id,
     name,
     email,
+    password,
     createdAt,
     updatedAt,
     isVerified,
@@ -37,6 +40,7 @@ class User with EquatableMixin {
     String? id,
     String? name,
     String? email,
+    String? password,
     DateTime? createdAt,
     DateTime? updatedAt,
     bool? isVerified,
@@ -47,6 +51,7 @@ class User with EquatableMixin {
       id: id ?? this.id,
       name: name ?? this.name,
       email: email ?? this.email,
+      password: password ?? this.password,
       createdAt: createdAt ?? this.createdAt,
       updatedAt: updatedAt ?? this.updatedAt,
       isVerified: isVerified ?? this.isVerified,
@@ -61,6 +66,7 @@ class User with EquatableMixin {
       'id': id,
       'name': name,
       'email': email,
+      'password': password,
       'created_at': createdAt,
       'updated_at': updatedAt,
       'is_verified': isVerified,
@@ -74,6 +80,7 @@ class User with EquatableMixin {
       id: json['id'] as String?,
       name: json['name'] as String?,
       email: json['email'] as String?,
+      password: json['password'] as String?,
       createdAt: json['created_at'] != null
           ? DateTime.parse(json['created_at'] as String)
           : null,

@@ -25,24 +25,24 @@ class ApiException implements Exception {
 
 /// Exception for communication errors (e.g., no internet, server down).
 class FetchDataException extends ApiException {
-  const FetchDataException([String? message, int? statusCode])
+  FetchDataException([String? message, int? statusCode])
     : super(message, "Error During Communication: ", statusCode);
 }
 
 /// Exception for invalid requests (e.g., bad request, malformed data).
 class BadRequestException extends ApiException {
-  const BadRequestException([String? message, int? statusCode])
+  BadRequestException([String? message, int? statusCode])
     : super(message, "Invalid Request: ", statusCode);
 }
 
 /// Exception for unauthorized access (e.g., 401 or 403 errors).
 class UnauthorisedException extends ApiException {
-  const UnauthorisedException([String? message, int? statusCode])
+  UnauthorisedException([String? message, int? statusCode])
     : super(message, "Unauthorised: ", statusCode);
 }
 
 /// Exception for invalid or unexpected input data.
 class InvalidInputException extends ApiException {
-  const InvalidInputException([String? message, int? statusCode])
+  InvalidInputException([String? message, int? statusCode])
     : super(message, "Invalid Input: ", statusCode);
 }

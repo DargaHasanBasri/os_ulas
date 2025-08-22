@@ -38,7 +38,7 @@ class LoadingState<T> extends BaseState<T> {
 /// In this case, the successfully received data is stored in [data].
 /// The [T] type here indicates the data type.
 class SuccessState<T> extends BaseState<T> {
-  const SuccessState(T data) : super(type: StateType.success, data: data);
+  const SuccessState([T? data]) : super(type: StateType.success, data: data);
 }
 
 /// An error occurred during the relevant operation. In this case,

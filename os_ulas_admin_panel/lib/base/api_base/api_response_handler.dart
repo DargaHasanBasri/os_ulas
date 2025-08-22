@@ -45,38 +45,20 @@ mixin ApiResponseHandler {
       // Error states.
       switch (statusCode) {
         case 400:
-          AppLogger.warningMsj(
-            "⚠️ [$statusCode] Bad Request -> $url : \n$formattedBody",
-          );
           throw BadRequestException(response.body, statusCode);
         case 401:
         case 403:
-          AppLogger.warningMsj(
-            "⚠️ [$statusCode] Unauthorized -> $url : \n$formattedBody",
-          );
           throw UnauthorisedException(response.body, statusCode);
         case 404:
-          AppLogger.warningMsj(
-            "⚠️ [$statusCode] Not Found -> $url : \n$formattedBody",
-          );
           throw FetchDataException("Resource not found", statusCode);
         case 422:
-          AppLogger.warningMsj(
-            "⚠️ [$statusCode] Invalid Input -> $url : \n$formattedBody",
-          );
           throw InvalidInputException(response.body, statusCode);
         case 500:
         case 502:
         case 503:
         case 504:
-          AppLogger.errorMsj(
-            "❌ [$statusCode] Server Error -> $url : \n$formattedBody",
-          );
           throw FetchDataException("Server error:", statusCode);
         default:
-          AppLogger.errorMsj(
-            "❌ [$statusCode] Unknown Error -> $url : \n$formattedBody",
-          );
           throw FetchDataException(
             "Error occurred with status code:",
             statusCode,
@@ -99,7 +81,9 @@ mixin ApiResponseHandler {
       throw FetchDataException("Server unavailable: ${e.message}", statusCode);
     } catch (e) {
       /// When another unexpected error occurs.
-      AppLogger.errorMsj("❌ [$method] -> $url : Unexpected error - $e");
+      AppLogger.errorMsj(
+        "❌ [$method] -> $url : Unexpected error [$statusCode] - $e",
+      );
       throw FetchDataException("Unexpected error: $e", statusCode);
     }
   }

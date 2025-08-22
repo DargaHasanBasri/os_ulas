@@ -1,5 +1,4 @@
 import '../../../export.dart';
-import '../../../viewmodel/users/radio_button_cubit.dart';
 
 class CustomRadioButton extends StatelessWidget {
   const CustomRadioButton({
@@ -42,12 +41,12 @@ class CustomRadioButton extends StatelessWidget {
               ),
               child: isSelected
                   ? Padding(
-                    padding: const EdgeInsets.all(4),
-                    child: CircleAvatar(
+                      padding: const EdgeInsets.all(4),
+                      child: CircleAvatar(
                         radius: 4,
                         backgroundColor: borderColor,
                       ),
-                  )
+                    )
                   : null,
             ),
           ),

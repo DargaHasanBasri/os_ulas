@@ -1,7 +1,4 @@
-import 'package:os_ulas_admin_panel/models/user.dart';
-import 'package:os_ulas_admin_panel/ui/widgets/components/custom_check_box.dart';
 import '../../../../../export.dart';
-import '../../../../../viewmodel/users/check_box_cubit.dart';
 
 class UsersDesktopItem extends StatelessWidget {
   const UsersDesktopItem({super.key, this.onTapTick, required this.user});
@@ -32,7 +29,7 @@ class UsersDesktopItem extends StatelessWidget {
                     onTap: () {
                       Clipboard.setData(
                         ClipboardData(
-                          text: AppConstants.exampleID,
+                          text: user.id ?? '',
                         ),
                       );
                       ScaffoldMessenger.of(context).showSnackBar(
@@ -40,11 +37,11 @@ class UsersDesktopItem extends StatelessWidget {
                       );
                     },
                     child: Tooltip(
-                      message: AppConstants.exampleID,
+                      message: user.id ?? '',
                       preferBelow: false,
                       verticalOffset: 12,
                       child: Text(
-                        user.id ?? '',
+                        "${user.id ?? ''}".shortenId,
                         style: Theme.of(context).textTheme.labelSmall,
                         overflow: TextOverflow.clip,
                         maxLines: 1,
@@ -68,7 +65,7 @@ class UsersDesktopItem extends StatelessWidget {
                 SizedBox(width: AppSizes.xXSmallSize),
                 Expanded(
                   child: Text(
-                    "User Test",
+                    user.name ?? '',
                     style: Theme.of(context).textTheme.labelSmall,
                     overflow: TextOverflow.ellipsis,
                   ),
@@ -79,7 +76,7 @@ class UsersDesktopItem extends StatelessWidget {
           Expanded(
             flex: 4,
             child: Text(
-              "dargahasanbasri@gmail.com",
+              user.email ?? '',
               style: Theme.of(context).textTheme.labelSmall,
               overflow: TextOverflow.ellipsis,
             ),
@@ -87,7 +84,7 @@ class UsersDesktopItem extends StatelessWidget {
           Expanded(
             flex: 3,
             child: Text(
-              "2025-06-13",
+              "${user.createdAt?.toDayMonthYear() ?? ''}",
               style: Theme.of(context).textTheme.labelSmall,
               textAlign: TextAlign.center,
               overflow: TextOverflow.ellipsis,
@@ -96,7 +93,7 @@ class UsersDesktopItem extends StatelessWidget {
           Expanded(
             flex: 3,
             child: Text(
-              "2025-06-13",
+              "${user.updatedAt?.toDayMonthYear() ?? ''}",
               style: Theme.of(context).textTheme.labelSmall,
               textAlign: TextAlign.center,
               overflow: TextOverflow.ellipsis,
@@ -105,7 +102,7 @@ class UsersDesktopItem extends StatelessWidget {
           Expanded(
             flex: 2,
             child: Text(
-              "True",
+              "${user.isVerified.toString().toUpperCase()}",
               style: Theme.of(context).textTheme.labelSmall,
               overflow: TextOverflow.ellipsis,
             ),

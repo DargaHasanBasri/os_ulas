@@ -5,4 +5,6 @@ import 'package:os_ulas_admin_panel/models/user.dart';
 abstract class IUserRepository {
   /// Method that returns all users.
   Future<List<User>> getAllUsers();
+
+  Future<User> addUser(User user);
 }
