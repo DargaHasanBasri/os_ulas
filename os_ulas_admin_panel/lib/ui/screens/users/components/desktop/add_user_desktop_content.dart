@@ -1,13 +1,16 @@
-import 'package:os_ulas_admin_panel/viewmodel/users/radio_button_cubit.dart';
+import 'package:os_ulas_admin_panel/utils/extensions/safe_future_extension.dart';
+
 import '../../../../../export.dart';
 
 class AddUserDesktopContent extends StatelessWidget {
-  const AddUserDesktopContent({super.key, this.onTapExit});
+  AddUserDesktopContent({super.key, this.onTapExit});
 
   final VoidCallback? onTapExit;
 
   @override
   Widget build(BuildContext context) {
+    final usersCubit = context.read<UsersCubit>();
+    final radioButtonCubit = context.read<RadioButtonCubit>();
     return Container(
       padding: AppPaddings.largeVertical + AppPaddings.xLargeHorizontal,
       decoration: BoxDecoration(
@@ -25,6 +28,7 @@ class AddUserDesktopContent extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          /// title and exit button
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -61,13 +65,14 @@ class AddUserDesktopContent extends StatelessWidget {
             ],
           ),
 
-          /// kullanıcı adı - kullanıcı e-mail
+          /// user name and email form
           Padding(
             padding: AppPaddings.largeTop,
             child: Row(
               children: [
                 Expanded(
                   child: CustomTextFormField(
+                    textEditingController: usersCubit.nameController,
                     borderRadius: 8,
                     textFormTitle: LocaleKeys.addUserDesktopContent_name.locale,
                     hintText:
@@ -77,6 +82,7 @@ class AddUserDesktopContent extends StatelessWidget {
                 SizedBox(width: AppSizes.xLargeSize),
                 Expanded(
                   child: CustomTextFormField(
+                    textEditingController: usersCubit.emailController,
                     borderRadius: 8,
                     textFormTitle:
                         LocaleKeys.addUserDesktopContent_email.locale,
@@ -88,13 +94,14 @@ class AddUserDesktopContent extends StatelessWidget {
             ),
           ),
 
-          /// parola - doğrulama
+          /// password - verification
           Padding(
             padding: AppPaddings.largeVertical,
             child: Row(
               children: [
                 Expanded(
                   child: CustomTextFormField(
+                    textEditingController: usersCubit.passwordController,
                     borderRadius: 8,
                     textFormTitle:
                         LocaleKeys.addUserDesktopContent_password.locale,
@@ -115,43 +122,40 @@ class AddUserDesktopContent extends StatelessWidget {
                           style: Theme.of(context).textTheme.labelSmall,
                         ),
                       ),
-                      BlocProvider(
-                        create: (_) => RadioButtonCubit(),
-                        child: Row(
-                          children: [
-                            Row(
-                              children: [
-                                CustomRadioButton(
-                                  index: 0,
-                                  onTapTick: (isClick) {},
-                                ),
-                                SizedBox(width: AppSizes.xXSmallSize),
-                                Text(
-                                  LocaleKeys
-                                      .addUserDesktopContent_verificationTrue
-                                      .locale,
-                                  style: Theme.of(context).textTheme.labelSmall,
-                                ),
-                              ],
-                            ),
-                            SizedBox(width: AppSizes.mediumSize),
-                            Row(
-                              children: [
-                                CustomRadioButton(
-                                  index: 1,
-                                  onTapTick: (isClick) {},
-                                ),
-                                SizedBox(width: AppSizes.xXSmallSize),
-                                Text(
-                                  LocaleKeys
-                                      .addUserDesktopContent_verificationFalse
-                                      .locale,
-                                  style: Theme.of(context).textTheme.labelSmall,
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
+                      Row(
+                        children: [
+                          Row(
+                            children: [
+                              CustomRadioButton(
+                                index: 0,
+                                onTapTick: (isClick) {},
+                              ),
+                              SizedBox(width: AppSizes.xXSmallSize),
+                              Text(
+                                LocaleKeys
+                                    .addUserDesktopContent_verificationTrue
+                                    .locale,
+                                style: Theme.of(context).textTheme.labelSmall,
+                              ),
+                            ],
+                          ),
+                          SizedBox(width: AppSizes.mediumSize),
+                          Row(
+                            children: [
+                              CustomRadioButton(
+                                index: 1,
+                                onTapTick: (isClick) {},
+                              ),
+                              SizedBox(width: AppSizes.xXSmallSize),
+                              Text(
+                                LocaleKeys
+                                    .addUserDesktopContent_verificationFalse
+                                    .locale,
+                                style: Theme.of(context).textTheme.labelSmall,
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
                     ],
                   ),
@@ -164,7 +168,23 @@ class AddUserDesktopContent extends StatelessWidget {
             child: CustomButton(
               title: 'ADD',
               width: 200,
-              onTap: () {},
+              onTap: () {
+                final newUser = User(
+                  name: usersCubit.nameController.text.trim(),
+                  email: usersCubit.emailController.text.trim(),
+                  password: usersCubit.passwordController.text.trim(),
+                  isVerified: radioButtonCubit == 0,
+                );
+                usersCubit
+                    .addUser(newUser)
+                    .handleApiCall(
+                      context: context,
+                      onSuccess: (_) {
+                        radioButtonCubit.clear();
+                        usersCubit.clearForm();
+                      },
+                    );
+              },
             ),
           ),
         ],

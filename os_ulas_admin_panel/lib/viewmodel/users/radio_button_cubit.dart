@@ -10,4 +10,8 @@ class RadioButtonCubit extends Cubit<int?> {
       emit(index);
     }
   }
+
+  void clear() {
+    emit(null);
+  }
 }

@@ -11,8 +11,8 @@ class BaseCubit<T> extends Cubit<BaseState<T>> {
   /// Emits the loading status.
   void emitLoading() => emit(const LoadingState());
 
-  /// It emits the success status and data.
-  void emitSuccess(T data) => emit(SuccessState<T>(data));
+  /// Emits success state with optional data
+  void emitSuccess([T? data]) => emit(SuccessState<T>(data));
 
   /// It emits an error status and an error message.
   void emitError(String message) => emit(ErrorState<T>(message));

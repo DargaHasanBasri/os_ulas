@@ -12,6 +12,7 @@ class CustomTextFormField extends StatelessWidget {
     this.textFormTitle,
     this.textFormHeight = 36,
     this.textFormWidth,
+    this.textEditingController,
   });
 
   final Color? backgroundColor;
@@ -23,6 +24,7 @@ class CustomTextFormField extends StatelessWidget {
   final String? textFormTitle;
   final double? textFormHeight;
   final double? textFormWidth;
+  final TextEditingController? textEditingController;
 
   @override
   Widget build(BuildContext context) {
@@ -48,6 +50,7 @@ class CustomTextFormField extends StatelessWidget {
       width: textFormWidth,
       height: textFormHeight,
       child: TextFormField(
+        controller: textEditingController,
         style: Theme.of(context).textTheme.labelSmall,
         decoration: InputDecoration(
           contentPadding: _contentPadding(),

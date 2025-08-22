@@ -1,5 +1,3 @@
-import 'package:os_ulas_admin_panel/repository/user_repository/IUser_repository.dart';
-import 'package:os_ulas_admin_panel/services/api_services/user_api_services/IUser_api_service.dart';
 import '../../export.dart';
 
 /// A repository class that implements the IUserRepository interface.
@@ -15,5 +13,10 @@ class UserRepository implements IUserRepository {
   @override
   Future<List<User>> getAllUsers() async {
     return await _userApiService.fetchAllUsers();
+  }
+
+  @override
+  Future<User> addUser(User user) async {
+    return await _userApiService.addUser(user);
   }
 }

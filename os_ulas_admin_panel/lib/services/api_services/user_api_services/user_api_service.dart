@@ -30,4 +30,16 @@ class UserApiService implements IUserApiService {
         .toList();
     return allUsersData;
   }
+
+  @override
+  Future<User> addUser(User user) async {
+    final response = await _apiBase.post(
+      "/user/register",
+      user.toJson(),
+    );
+
+    final data = jsonDecode(response.body);
+
+    return User.fromJson(data as Map<String, dynamic>);
+  }
 }

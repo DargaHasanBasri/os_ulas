@@ -1,8 +1,3 @@
-import 'package:os_ulas_admin_panel/models/user.dart';
-import 'package:os_ulas_admin_panel/services/dependency_setup_service/dependency_setup_service.dart';
-import 'package:os_ulas_admin_panel/ui/widgets/components/bloc_state_builder.dart';
-import 'package:os_ulas_admin_panel/viewmodel/users/users_cubit.dart';
-
 import '../../../export.dart';
 import 'components/desktop/add_user_desktop_content.dart';
 import 'components/user_list_detail.dart';
@@ -17,10 +12,14 @@ class UsersScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => getIt<UsersCubit>()..getAllUsers(),
-      child: SiteLayout(
-        desktop: desktopScreen(context),
-        tablet: tabletScreen(context),
-        mobile: mobileScreen(context),
+      child: Builder(
+        builder: (context) {
+          return SiteLayout(
+            desktop: desktopScreen(context),
+            tablet: tabletScreen(context),
+            mobile: mobileScreen(context),
+          );
+        },
       ),
     );
   }
@@ -130,7 +129,7 @@ class UsersScreen extends StatelessWidget {
                                   itemBuilder: (context, index) {
                                     final user = users[index];
                                     return UsersDesktopItem(
-                                      user: user, // User datasını geç
+                                      user: user,
                                       onTapTick: (isClick) {},
                                     );
                                   },
@@ -147,9 +146,22 @@ class UsersScreen extends StatelessWidget {
                         ],
                       ),
                     )
-                  : AddUserDesktopContent(
-                      onTapExit: () =>
-                          context.read<VisibilityCubit>().toggleVisibility(),
+                  : MultiBlocProvider(
+                      providers: [
+                        BlocProvider(
+                          create: (context) =>
+                              UsersCubit(getIt<IUserRepository>()),
+                        ),
+                        BlocProvider(
+                          create: (context) => RadioButtonCubit(),
+                        ),
+                      ],
+                      child: AddUserDesktopContent(
+                        onTapExit: () {
+                          context.read<VisibilityCubit>().toggleVisibility();
+                          context.read<UsersCubit>().refreshUsers();
+                        },
+                      ),
                     );
             },
           ),
@@ -256,22 +268,27 @@ class UsersScreen extends StatelessWidget {
         ),
 
         /// list of users
-        Padding(
-          padding: AppPaddings.mediumVertical,
-          child: GridView.builder(
-            shrinkWrap: true,
-            padding: EdgeInsets.symmetric(vertical: 8),
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              crossAxisSpacing: 34,
-              mainAxisSpacing: 24,
-              mainAxisExtent: 320,
-            ),
-            itemCount: 15,
-            itemBuilder: (context, index) {
-              return UserListDetails();
-            },
-          ),
+        BlocStateBuilder<List<User>>(
+          cubit: context.read<UsersCubit>(),
+          successBuilder: (users) {
+            return Padding(
+              padding: AppPaddings.mediumVertical,
+              child: GridView.builder(
+                shrinkWrap: true,
+                padding: EdgeInsets.symmetric(vertical: 8),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 34,
+                  mainAxisSpacing: 24,
+                  mainAxisExtent: 320,
+                ),
+                itemCount: 15,
+                itemBuilder: (context, index) {
+                  return UserListDetails();
+                },
+              ),
+            );
+          },
         ),
       ],
     );

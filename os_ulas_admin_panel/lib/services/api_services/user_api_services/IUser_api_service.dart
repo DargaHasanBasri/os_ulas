@@ -5,4 +5,6 @@ import 'package:os_ulas_admin_panel/models/user.dart';
 abstract class IUserApiService {
   /// The method that retrieves all users from the API.
   Future<List<User>> fetchAllUsers();
+
+  Future<User> addUser(User user);
 }

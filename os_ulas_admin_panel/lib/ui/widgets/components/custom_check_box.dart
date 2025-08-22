@@ -1,5 +1,4 @@
 import '../../../export.dart';
-import '../../../viewmodel/users/check_box_cubit.dart';
 
 class CustomCheckBox extends StatelessWidget {
   const CustomCheckBox({
