@@ -8,6 +8,10 @@ final class CustomLightTheme implements CustomTheme {
     fontFamily: 'PlusJakartaSans',
     appBarTheme: appBarTheme,
     textTheme: textTheme,
+    textSelectionTheme: const TextSelectionThemeData(
+      cursorColor: ColorName.grey,
+      selectionColor: ColorName.santaGrey,
+    ),
   );
 
   @override
@@ -22,90 +26,90 @@ final class CustomLightTheme implements CustomTheme {
   );
 
   @override
-  final TextTheme textTheme = const TextTheme(
+  final TextTheme textTheme = TextTheme(
     /// Body light
     bodyLarge: TextStyle(
       fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontWeight: FontWeight.w700,
+      color: ColorName.mirage,
     ),
     bodyMedium: TextStyle(
       fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontWeight: FontWeight.w600,
+      color: ColorName.mirage,
     ),
     bodySmall: TextStyle(
       fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontWeight: FontWeight.w500,
+      color: ColorName.mirage,
     ),
 
     /// Display light
     displayLarge: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 24,
+      fontWeight: FontWeight.w700,
+      color: ColorName.mirage,
     ),
     displayMedium: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 24,
+      fontWeight: FontWeight.w600,
+      color: ColorName.mirage,
     ),
     displaySmall: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 24,
+      fontWeight: FontWeight.w500,
+      color: ColorName.mirage,
     ),
 
     /// Headline light
     headlineLarge: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 16,
+      fontWeight: FontWeight.w700,
+      color: ColorName.mirage,
     ),
     headlineMedium: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 16,
+      fontWeight: FontWeight.w600,
+      color: ColorName.mirage,
     ),
     headlineSmall: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 16,
+      fontWeight: FontWeight.w400,
+      color: ColorName.mirage,
     ),
 
     /// Label light
     labelLarge: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 14,
+      fontWeight: FontWeight.w700,
+      color: ColorName.mirage,
     ),
     labelMedium: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 14,
+      fontWeight: FontWeight.w600,
+      color: ColorName.mirage,
     ),
     labelSmall: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 14,
+      fontWeight: FontWeight.w500,
+      color: ColorName.mirage,
     ),
 
     /// Title light
     titleLarge: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 12,
+      fontWeight: FontWeight.w700,
+      color: ColorName.mirage,
     ),
     titleMedium: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 12,
+      fontWeight: FontWeight.w600,
+      color: ColorName.mirage,
     ),
     titleSmall: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 12,
+      fontWeight: FontWeight.w500,
+      color: ColorName.mirage,
     ),
   );
 }
