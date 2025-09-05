@@ -1,8 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
-
 import 'export.dart';
 
-Future<void> main() async{
+Future<void> main() async {
   await AppStart.init();
   runApp(
     AppLocalization(
@@ -22,14 +21,9 @@ class MyApp extends StatelessWidget {
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
-      theme: ThemeData(
-        useMaterial3: true,
-        colorScheme: CustomColorScheme.lightColorScheme,
-      ),
-      darkTheme: ThemeData(
-        useMaterial3: true,
-        colorScheme: CustomColorScheme.darkColorScheme,
-      ),
+      themeMode: ThemeMode.light,
+      theme: CustomLightTheme().themeData,
+      darkTheme: CustomDarkTheme().themeData,
       home: SplashScreen(),
     );
   }
