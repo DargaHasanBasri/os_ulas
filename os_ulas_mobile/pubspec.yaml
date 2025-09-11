@@ -37,8 +37,16 @@ dev_dependencies:
   # Linter
   very_good_analysis: ^9.0.0
 
+  flutter_launcher_icons: ^0.14.4
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/app_logo/os_ulas_app_logo.jpg"
+
 flutter:
   uses-material-design: true
 
   assets:
     - assets/langs/
+    - assets/app_logo/

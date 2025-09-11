@@ -88,12 +88,29 @@ class $AssetsIconsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/app_logo.png
+  AssetGenImage get appLogo =>
+      const AssetGenImage('assets/images/app_logo.png');
+
   /// File path: assets/images/img_loading.png
   AssetGenImage get imgLoading =>
       const AssetGenImage('assets/images/img_loading.png');
 
+  /// File path: assets/images/os_ulas_app_logo.jpg
+  AssetGenImage get osUlasAppLogo =>
+      const AssetGenImage('assets/images/os_ulas_app_logo.jpg');
+
+  /// File path: assets/images/splash_logo.png
+  AssetGenImage get splashLogo =>
+      const AssetGenImage('assets/images/splash_logo.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [imgLoading];
+  List<AssetGenImage> get values => [
+    appLogo,
+    imgLoading,
+    osUlasAppLogo,
+    splashLogo,
+  ];
 }
 
 class $AssetsLottieGen {

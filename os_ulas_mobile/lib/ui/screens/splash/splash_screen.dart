@@ -1,45 +1,59 @@
-import 'package:os_ulas_mobile/ui/widgets/custom_text_form_field.dart';
-import 'package:os_ulas_mobile/utils/constants/app_decorations.dart';
-
-import '../../../export.dart';
+import 'export.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: ColorName.white,
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: AppPaddings.largeAll,
+    return BlocProvider(
+      create: (_) => SplashCubit()..startAnimation(),
+      child: Scaffold(
+        body: Container(
+          decoration: BoxDecoration(
+            gradient: const LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [
+                Color(0xffF0A58E),
+                Color(0xff613EEA),
+              ],
+            ),
+          ),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Assets.icons.icError.image(
-                package: 'gen',
+              BlocBuilder<SplashCubit, SplashState>(
+                builder: (context, state) {
+                  return Transform(
+                    alignment: Alignment.center,
+                    transform: Matrix4.identity()..rotateY(state.angle),
+                    child: CircleAvatar(
+                      backgroundColor: Colors.white,
+                      radius: 70,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(70),
+                        child: Assets.images.osUlasAppLogo.image(
+                          package: 'gen',
+                        ),
+                      ),
+                    ),
+                  );
+                },
               ),
               Padding(
-                padding: AppPaddings.mediumVertical,
-                child: CustomTextFormField(
-                  textInputAction: TextInputAction.done,
-                  hintText: 'Ad Soyad',
+                padding: AppPaddings.mediumTop,
+                child: Center(
+                  child: CustomAnimationText(
+                    text: 'Osmaniye\nSizi Premium Hissettirir ;)',
+                    style: Theme.of(
+                      context,
+                    ).textTheme.displayLarge?.copyWith(
+                      color: ColorName.white,
+                      fontSize: 20,
+                    ),
+                  ),
                 ),
-              ),
-              Padding(
-                padding: AppPaddings.mediumVertical,
-                child: CustomButton(
-                  titleGradient: 'Geçmiş Geri Bildirimlerim',
-                  onTap: () {},
-                  buttonDefaultDecoration: AppDecorations.defaultDecoration(),
-                  buttonBorderDecoration:
-                      AppDecorations.borderGradientDecoration(),
-                ),
-              ),
-              CustomButton(
-                titleDefault: 'Gönder',
-                onTap: () {},
-                buttonDefaultDecoration:
-                    AppDecorations.gradientShadowDecoration(),
               ),
             ],
           ),

@@ -1,3 +1,4 @@
+import 'package:flutter/services.dart';
 import 'export.dart';
 
 final class CustomDarkTheme implements CustomTheme {
@@ -15,7 +16,6 @@ final class CustomDarkTheme implements CustomTheme {
 
   @override
   final AppBarTheme appBarTheme = const AppBarTheme(
-    backgroundColor: Colors.black,
     toolbarHeight: 80,
     scrolledUnderElevation: 0,
     centerTitle: true,
