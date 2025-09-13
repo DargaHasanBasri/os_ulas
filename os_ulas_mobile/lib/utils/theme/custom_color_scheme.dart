@@ -1,5 +1,3 @@
-import 'package:gen/gen.dart';
-
 import 'export.dart';
 
 final class CustomColorScheme {

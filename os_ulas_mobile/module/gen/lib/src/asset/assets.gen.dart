@@ -92,9 +92,9 @@ class $AssetsImagesGen {
   AssetGenImage get appLogo =>
       const AssetGenImage('assets/images/app_logo.png');
 
-  /// File path: assets/images/img_loading.png
-  AssetGenImage get imgLoading =>
-      const AssetGenImage('assets/images/img_loading.png');
+  /// File path: assets/images/img_onboarding_first.png
+  AssetGenImage get imgOnboardingFirst =>
+      const AssetGenImage('assets/images/img_onboarding_first.png');
 
   /// File path: assets/images/os_ulas_app_logo.jpg
   AssetGenImage get osUlasAppLogo =>
@@ -107,7 +107,7 @@ class $AssetsImagesGen {
   /// List of all assets
   List<AssetGenImage> get values => [
     appLogo,
-    imgLoading,
+    imgOnboardingFirst,
     osUlasAppLogo,
     splashLogo,
   ];
