@@ -1,5 +1,5 @@
-import '../../export.dart';
 import 'package:easy_localization/easy_localization.dart';
+import '../../export.dart';
 
 /// A static class that handles application initialization.
 class AppStart {

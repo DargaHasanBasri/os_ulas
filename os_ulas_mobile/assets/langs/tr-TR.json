@@ -1,3 +1,21 @@
 {
-  "appTitle": "OsUlaş"
+  "appTitle": "OsUlaş",
+  "general": {
+    "skip": "Atla",
+    "start": "Başlayın",
+    "next": "Sonraki"
+  },
+  "splashScreen": {
+    "title": "Osmaniye",
+    "subTitle": "Sizi Premium Hissettirir ;)"
+  },
+  "onboardingScreen": {
+    "firstScreenTitle": "Şehir İçi Ulaşımı Kolayca Takip Edin",
+    "firstScreenSubTitle": "Gitmek istediğiniz yere hangi otobüs gider? Saat kaçta kalkar? Hepsi parmaklarınızın ucunda.",
+    "secondScreenTitle": "İki Durak Arasında Hangi Otobüs Gider?",
+    "secondScreenSubTitle": "Başlangıç ve varış noktalarını seçin, hangi otobüslerin geçtiğini anında öğrenin.",
+    "thirdScreenTitleOne": "Eksik Durakları",
+    "thirdScreenTitleTwo": "Siz Ekleyin",
+    "thirdScreenSubTitle": "Gerçekte olan ama uygulamada olmayan durakları birkaç adımda ekleyerek katkıda bulunun."
+  }
 }

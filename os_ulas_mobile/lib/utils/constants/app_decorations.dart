@@ -56,8 +56,8 @@ final class AppDecorations {
         begin: Alignment.centerLeft,
         end: Alignment.centerRight,
         colors: [
-          Color(0xffF0A58E),
           Color(0xff613EEA),
+          Color(0xffF0A58E),
         ],
       ),
     );

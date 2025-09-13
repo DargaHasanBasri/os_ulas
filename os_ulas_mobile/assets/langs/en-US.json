@@ -1,3 +1,21 @@
 {
-  "appTitle": "OsUlaş"
+  "appTitle": "OsUlaş",
+  "general": {
+    "skip": "Skip",
+    "start": "Start",
+    "next": "Next"
+  },
+  "splashScreen": {
+    "title": "Osmaniye",
+    "subTitle": "Makes You Feel Premium ;)"
+  },
+  "onboardingScreen": {
+    "firstScreenTitle": "Easily Track Urban Transportation",
+    "firstScreenSubTitle": "Which bus goes where you want to go? What time does it depart? It's all at your fingertips.",
+    "secondScreenTitle": "Which bus goes between two stops?",
+    "secondScreenSubTitle": "Choose your starting and destination points and instantly find out which buses are passing by.",
+    "thirdScreenTitleOne": "You Add",
+    "thirdScreenTitleTwo": "The Missing Stops",
+    "thirdScreenSubTitle": "Contribute by adding stops that are actually there but not in the application in a few steps."
+  }
 }

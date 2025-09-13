@@ -1,6 +1,6 @@
 import 'export.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatelessWidget with SplashScreenMixin {
   const SplashScreen({super.key});
 
   @override
@@ -14,8 +14,8 @@ class SplashScreen extends StatelessWidget {
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
               colors: [
-                Color(0xffF0A58E),
-                Color(0xff613EEA),
+                ColorName.blush,
+                ColorName.purpleBlue,
               ],
             ),
           ),
@@ -34,7 +34,7 @@ class SplashScreen extends StatelessWidget {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(70),
                         child: Assets.images.osUlasAppLogo.image(
-                          package: 'gen',
+                          package: AppConstants.genPackageName,
                         ),
                       ),
                     ),
@@ -45,7 +45,7 @@ class SplashScreen extends StatelessWidget {
                 padding: AppPaddings.mediumTop,
                 child: Center(
                   child: CustomAnimationText(
-                    text: 'Osmaniye\nSizi Premium Hissettirir ;)',
+                    text: splashTitleAndSubtitle,
                     style: Theme.of(
                       context,
                     ).textTheme.displayLarge?.copyWith(
