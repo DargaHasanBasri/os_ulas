@@ -8,6 +8,8 @@ abstract class  LocaleKeys {
   static const general_start = 'general.start';
   static const general_next = 'general.next';
   static const general = 'general';
+  static const buttonTitle_guestUser = 'buttonTitle.guestUser';
+  static const buttonTitle = 'buttonTitle';
   static const splashScreen_title = 'splashScreen.title';
   static const splashScreen_subTitle = 'splashScreen.subTitle';
   static const splashScreen = 'splashScreen';
@@ -19,5 +21,10 @@ abstract class  LocaleKeys {
   static const onboardingScreen_thirdScreenTitleTwo = 'onboardingScreen.thirdScreenTitleTwo';
   static const onboardingScreen_thirdScreenSubTitle = 'onboardingScreen.thirdScreenSubTitle';
   static const onboardingScreen = 'onboardingScreen';
+  static const welcomeScreen_title = 'welcomeScreen.title';
+  static const welcomeScreen_signWith = 'welcomeScreen.signWith';
+  static const welcomeScreen_isAccount = 'welcomeScreen.isAccount';
+  static const welcomeScreen_signUp = 'welcomeScreen.signUp';
+  static const welcomeScreen = 'welcomeScreen';
 
 }

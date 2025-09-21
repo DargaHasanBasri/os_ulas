@@ -5,6 +5,9 @@
     "start": "Başlayın",
     "next": "Sonraki"
   },
+  "buttonTitle": {
+    "guestUser": "Misafir Kullanıcı"
+  },
   "splashScreen": {
     "title": "Osmaniye",
     "subTitle": "Sizi Premium Hissettirir ;)"
@@ -17,5 +20,11 @@
     "thirdScreenTitleOne": "Eksik Durakları",
     "thirdScreenTitleTwo": "Siz Ekleyin",
     "thirdScreenSubTitle": "Gerçekte olan ama uygulamada olmayan durakları birkaç adımda ekleyerek katkıda bulunun."
+  },
+  "welcomeScreen": {
+    "title": "Uygulamaya hoşgeldiniz. Bize yardımcı olmak ve kullanıcı özelinde etkileşimleri kullanabilmek için otururum açmayı unutmayın.",
+    "signWith": "Şununla oturum açın",
+    "isAccount": "Hesabınız yok mu? ",
+    "signUp": "Üye Ol"
   }
 }

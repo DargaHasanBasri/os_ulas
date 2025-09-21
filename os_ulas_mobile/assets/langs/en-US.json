@@ -5,6 +5,9 @@
     "start": "Start",
     "next": "Next"
   },
+  "buttonTitle": {
+    "guestUser": "Guest User"
+  },
   "splashScreen": {
     "title": "Osmaniye",
     "subTitle": "Makes You Feel Premium ;)"
@@ -17,5 +20,11 @@
     "thirdScreenTitleOne": "You Add",
     "thirdScreenTitleTwo": "The Missing Stops",
     "thirdScreenSubTitle": "Contribute by adding stops that are actually there but not in the application in a few steps."
+  },
+  "welcomeScreen": {
+    "title": "Welcome to the app. Don't forget to log in to help us and use user-specific interactions.",
+    "signWith": "Sign in with",
+    "isAccount": "Don’t have an account? ",
+    "signUp": "Sign Up"
   }
 }

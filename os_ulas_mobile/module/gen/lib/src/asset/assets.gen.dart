@@ -47,6 +47,10 @@ class $AssetsIconsGen {
   AssetGenImage get icFilter =>
       const AssetGenImage('assets/icons/ic_filter.png');
 
+  /// File path: assets/icons/ic_google.png
+  AssetGenImage get icGoogle =>
+      const AssetGenImage('assets/icons/ic_google.png');
+
   /// File path: assets/icons/ic_location.png
   AssetGenImage get icLocation =>
       const AssetGenImage('assets/icons/ic_location.png');
@@ -77,6 +81,7 @@ class $AssetsIconsGen {
     icError,
     icFeedBack,
     icFilter,
+    icGoogle,
     icLocation,
     icLock,
     icRefresh,
@@ -96,6 +101,10 @@ class $AssetsImagesGen {
   AssetGenImage get imgOnboardingFirst =>
       const AssetGenImage('assets/images/img_onboarding_first.png');
 
+  /// File path: assets/images/img_welcome.png
+  AssetGenImage get imgWelcome =>
+      const AssetGenImage('assets/images/img_welcome.png');
+
   /// File path: assets/images/os_ulas_app_logo.jpg
   AssetGenImage get osUlasAppLogo =>
       const AssetGenImage('assets/images/os_ulas_app_logo.jpg');
@@ -108,6 +117,7 @@ class $AssetsImagesGen {
   List<AssetGenImage> get values => [
     appLogo,
     imgOnboardingFirst,
+    imgWelcome,
     osUlasAppLogo,
     splashLogo,
   ];

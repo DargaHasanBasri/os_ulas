@@ -13,6 +13,9 @@ import 'package:flutter/material.dart';
 class ColorName {
   ColorName._();
 
+  /// Color: #F9FAFB
+  static const Color alabaster = Color(0xFFF9FAFB);
+
   /// Color: #F3F3F3
   static const Color aquaHaze = Color(0xFFF3F3F3);
 
@@ -25,11 +28,17 @@ class ColorName {
   /// Color: #A9A1C9
   static const Color coldPurple = Color(0xFFA9A1C9);
 
+  /// Color: #699CF4
+  static const Color cornflowerBlue = Color(0xFF699CF4);
+
   /// Color: #34C759
   static const Color darkMint = Color(0xFF34C759);
 
   /// Color: #989692
   static const Color grey = Color(0xFF989692);
+
+  /// Color: #BCCAD6
+  static const Color jungleMist = Color(0xFFBCCAD6);
 
   /// Color: #111827
   static const Color mirage = Color(0xFF111827);
