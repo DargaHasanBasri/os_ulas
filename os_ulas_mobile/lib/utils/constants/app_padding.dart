@@ -4,8 +4,9 @@ final class AppPaddings {
   AppPaddings._();
 
   /// Equal padding values from all directions
-  static const xSmallAll = EdgeInsets.all(4);
-  static const smallAll = EdgeInsets.all(8);
+  static const xXSmallAll = EdgeInsets.all(4);
+  static const xSmallAll = EdgeInsets.all(8);
+  static const smallAll = EdgeInsets.all(12);
   static const mediumAll = EdgeInsets.all(16);
   static const largeAll = EdgeInsets.all(24);
   static const xLargeAll = EdgeInsets.all(32);
