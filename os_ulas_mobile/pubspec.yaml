@@ -21,10 +21,18 @@ dependencies:
   # Localization
   easy_localization: ^3.0.7+1
 
+  # Map
+  google_maps_flutter: ^2.13.1
+  geolocator: ^14.0.2
+
+  # Permissions
+  permission_handler: ^12.0.1
+
   # Utilities
   hive: ^2.2.3
   image_picker: ^1.1.2
   logger: ^2.6.0
+  curved_navigation_bar: ^1.0.6
   
   # code gen
   gen:
@@ -50,3 +58,4 @@ flutter:
   assets:
     - assets/langs/
     - assets/app_logo/
+    - assets/map_themes/

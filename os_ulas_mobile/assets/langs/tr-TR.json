@@ -3,7 +3,8 @@
   "general": {
     "skip": "Atla",
     "start": "Başlayın",
-    "next": "Sonraki"
+    "next": "Sonraki",
+    "searchHintText": "Durak arayın..."
   },
   "buttonTitle": {
     "guestUser": "Misafir Kullanıcı"

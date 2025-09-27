@@ -5,6 +5,7 @@ class CustomTextFormField extends StatelessWidget {
     super.key,
     this.backgroundColor = ColorName.white,
     this.prefixIcon,
+    this.suffixIcon,
     this.hintText = '',
     this.hintTextStyle,
     this.borderRadius = 8,
@@ -22,6 +23,7 @@ class CustomTextFormField extends StatelessWidget {
 
   final Color? backgroundColor;
   final Widget? prefixIcon;
+  final Widget? suffixIcon;
   final String? hintText;
   final TextStyle? hintTextStyle;
   final double? borderRadius;
@@ -72,6 +74,13 @@ class CustomTextFormField extends StatelessWidget {
           filled: true,
           fillColor: backgroundColor,
           prefixIcon: prefixIcon,
+          suffixIcon: Padding(
+            padding:
+                AppPaddings.smallRight +
+                AppPaddings.xSmallVertical +
+                AppPaddings.xSmallLeft,
+            child: suffixIcon,
+          ),
           hintText: hintText,
           hintStyle: _defaultHintTextStyle(context),
           border: OutlineInputBorder(
@@ -80,7 +89,7 @@ class CustomTextFormField extends StatelessWidget {
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(borderRadius!),
-            borderSide: BorderSide(color: focusedBorderColor!),
+            borderSide: BorderSide(color: Colors.transparent),
           ),
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(borderRadius!),
@@ -103,7 +112,7 @@ class CustomTextFormField extends StatelessWidget {
             ).textTheme.labelSmall?.copyWith(
               color: ColorName.grey,
             )
-            : null;
+            : hintTextStyle;
     return defaultHintTextStyle;
   }
 
@@ -115,7 +124,7 @@ class CustomTextFormField extends StatelessWidget {
             ? AppPaddings.xXSmallVertical
             : AppPaddings.xSmallVertical +
                 AppPaddings.mediumLeft +
-                AppPaddings.smallRight;
+                AppPaddings.xSmallRight;
 
     return contentPadding;
   }

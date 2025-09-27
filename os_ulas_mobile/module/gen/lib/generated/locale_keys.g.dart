@@ -7,6 +7,7 @@ abstract class  LocaleKeys {
   static const general_skip = 'general.skip';
   static const general_start = 'general.start';
   static const general_next = 'general.next';
+  static const general_searchHintText = 'general.searchHintText';
   static const general = 'general';
   static const buttonTitle_guestUser = 'buttonTitle.guestUser';
   static const buttonTitle = 'buttonTitle';

@@ -6,4 +6,6 @@ final class AppConstants {
   static const String exampleID = "159f22d7-8249-42a4-b94e-f778dc8ab404";
   static const String genPackageName = "gen";
   static const String thinSpace = "\u200A";
+  static const String appTitleOS = "OS";
+  static const String appTitleULAS = "ULAŞ";
 }

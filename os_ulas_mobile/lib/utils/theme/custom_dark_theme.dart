@@ -15,7 +15,7 @@ final class CustomDarkTheme implements CustomTheme {
 
   @override
   final AppBarTheme appBarTheme = const AppBarTheme(
-    toolbarHeight: 80,
+    toolbarHeight: 60,
     scrolledUnderElevation: 0,
     centerTitle: true,
   );
@@ -25,86 +25,86 @@ final class CustomDarkTheme implements CustomTheme {
     /// Body dark
     bodyLarge: TextStyle(
       fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontWeight: FontWeight.w700,
+      color: ColorName.white,
     ),
     bodyMedium: TextStyle(
       fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontWeight: FontWeight.w600,
+      color: ColorName.white,
     ),
     bodySmall: TextStyle(
       fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontWeight: FontWeight.w500,
+      color: ColorName.white,
     ),
 
     /// Display dark
     displayLarge: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 24,
+      fontWeight: FontWeight.w700,
+      color: ColorName.white,
     ),
     displayMedium: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 24,
+      fontWeight: FontWeight.w600,
+      color: ColorName.white,
     ),
     displaySmall: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 24,
+      fontWeight: FontWeight.w500,
+      color: ColorName.white,
     ),
 
     /// Headline dark
     headlineLarge: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 16,
+      fontWeight: FontWeight.w700,
+      color: ColorName.white,
     ),
     headlineMedium: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 16,
+      fontWeight: FontWeight.w600,
+      color: ColorName.white,
     ),
     headlineSmall: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 16,
+      fontWeight: FontWeight.w400,
+      color: ColorName.white,
     ),
 
     /// Label dark
     labelLarge: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 14,
+      fontWeight: FontWeight.w700,
+      color: ColorName.white,
     ),
     labelMedium: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 14,
+      fontWeight: FontWeight.w600,
+      color: ColorName.white,
     ),
     labelSmall: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 14,
+      fontWeight: FontWeight.w500,
+      color: ColorName.white,
     ),
 
     /// Title dark
     titleLarge: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 12,
+      fontWeight: FontWeight.w700,
+      color: ColorName.white,
     ),
     titleMedium: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 12,
+      fontWeight: FontWeight.w600,
+      color: ColorName.white,
     ),
     titleSmall: TextStyle(
-      fontSize: 32,
-      fontWeight: FontWeight.bold,
-      color: Colors.black,
+      fontSize: 12,
+      fontWeight: FontWeight.w500,
+      color: ColorName.white,
     ),
   );
 }

@@ -3,7 +3,8 @@
   "general": {
     "skip": "Skip",
     "start": "Start",
-    "next": "Next"
+    "next": "Next",
+    "searchHintText": "Search for a stop..."
   },
   "buttonTitle": {
     "guestUser": "Guest User"
