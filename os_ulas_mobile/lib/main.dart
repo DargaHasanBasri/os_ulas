@@ -4,8 +4,15 @@ import 'export.dart';
 Future<void> main() async {
   await AppStart.init();
   runApp(
-    AppLocalization(
-      child: const MyApp(),
+    MultiBlocProvider(
+      providers: [
+        BlocProvider<HomeNavigationCubit>(
+          create: (_) => HomeNavigationCubit(),
+        ),
+      ],
+      child: AppLocalization(
+        child: const MyApp(),
+      ),
     ),
   );
 }
@@ -21,10 +28,10 @@ class MyApp extends StatelessWidget {
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.system,
       theme: CustomLightTheme().themeData,
       darkTheme: CustomDarkTheme().themeData,
-      home: WelcomeScreen(),
+      home: HomeScreen(),
     );
   }
 }

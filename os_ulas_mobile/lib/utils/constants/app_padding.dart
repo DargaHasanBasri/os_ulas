@@ -50,8 +50,9 @@ final class AppPaddings {
   static const xXLargeLeft = EdgeInsets.only(left: 64);
 
   /// Right padding values
-  static const xSmallRight = EdgeInsets.only(right: 4);
-  static const smallRight = EdgeInsets.only(right: 8);
+  static const xXSmallRight = EdgeInsets.only(right: 4);
+  static const xSmallRight = EdgeInsets.only(right: 8);
+  static const smallRight = EdgeInsets.only(right: 12);
   static const mediumRight = EdgeInsets.only(right: 16);
   static const largeRight = EdgeInsets.only(right: 24);
   static const xLargeRight = EdgeInsets.only(right: 32);

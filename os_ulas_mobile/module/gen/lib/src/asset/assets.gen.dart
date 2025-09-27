@@ -39,9 +39,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_error.png
   AssetGenImage get icError => const AssetGenImage('assets/icons/ic_error.png');
 
-  /// File path: assets/icons/ic_feed_back.png
-  AssetGenImage get icFeedBack =>
-      const AssetGenImage('assets/icons/ic_feed_back.png');
+  /// File path: assets/icons/ic_feedback.png
+  AssetGenImage get icFeedback =>
+      const AssetGenImage('assets/icons/ic_feedback.png');
 
   /// File path: assets/icons/ic_filter.png
   AssetGenImage get icFilter =>
@@ -57,6 +57,13 @@ class $AssetsIconsGen {
 
   /// File path: assets/icons/ic_lock.png
   AssetGenImage get icLock => const AssetGenImage('assets/icons/ic_lock.png');
+
+  /// File path: assets/icons/ic_menu.png
+  AssetGenImage get icMenu => const AssetGenImage('assets/icons/ic_menu.png');
+
+  /// File path: assets/icons/ic_my_location.png
+  AssetGenImage get icMyLocation =>
+      const AssetGenImage('assets/icons/ic_my_location.png');
 
   /// File path: assets/icons/ic_refresh.png
   AssetGenImage get icRefresh =>
@@ -79,11 +86,13 @@ class $AssetsIconsGen {
     icDownArrow,
     icDownDropDownArrow,
     icError,
-    icFeedBack,
+    icFeedback,
     icFilter,
     icGoogle,
     icLocation,
     icLock,
+    icMenu,
+    icMyLocation,
     icRefresh,
     icRightErrorArrow,
     icSearch,
@@ -96,6 +105,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/app_logo.png
   AssetGenImage get appLogo =>
       const AssetGenImage('assets/images/app_logo.png');
+
+  /// File path: assets/images/img_my_profile.jpg
+  AssetGenImage get imgMyProfile =>
+      const AssetGenImage('assets/images/img_my_profile.jpg');
 
   /// File path: assets/images/img_onboarding_first.png
   AssetGenImage get imgOnboardingFirst =>
@@ -116,6 +129,7 @@ class $AssetsImagesGen {
   /// List of all assets
   List<AssetGenImage> get values => [
     appLogo,
+    imgMyProfile,
     imgOnboardingFirst,
     imgWelcome,
     osUlasAppLogo,

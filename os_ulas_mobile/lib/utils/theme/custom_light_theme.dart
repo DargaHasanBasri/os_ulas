@@ -19,7 +19,7 @@ final class CustomLightTheme implements CustomTheme {
 
   @override
   final AppBarTheme appBarTheme = const AppBarTheme(
-    toolbarHeight: 80,
+    toolbarHeight: 60,
     scrolledUnderElevation: 0,
     centerTitle: true,
   );
