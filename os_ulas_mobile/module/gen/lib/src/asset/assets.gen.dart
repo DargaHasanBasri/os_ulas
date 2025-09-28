@@ -36,6 +36,26 @@ class $AssetsIconsGen {
   AssetGenImage get icDownDropDownArrow =>
       const AssetGenImage('assets/icons/ic_down_drop_down_arrow.png');
 
+  /// File path: assets/icons/ic_drawer1.png
+  AssetGenImage get icDrawer1 =>
+      const AssetGenImage('assets/icons/ic_drawer1.png');
+
+  /// File path: assets/icons/ic_drawer2.png
+  AssetGenImage get icDrawer2 =>
+      const AssetGenImage('assets/icons/ic_drawer2.png');
+
+  /// File path: assets/icons/ic_drawer3.png
+  AssetGenImage get icDrawer3 =>
+      const AssetGenImage('assets/icons/ic_drawer3.png');
+
+  /// File path: assets/icons/ic_drawer4.png
+  AssetGenImage get icDrawer4 =>
+      const AssetGenImage('assets/icons/ic_drawer4.png');
+
+  /// File path: assets/icons/ic_drawer5.png
+  AssetGenImage get icDrawer5 =>
+      const AssetGenImage('assets/icons/ic_drawer5.png');
+
   /// File path: assets/icons/ic_error.png
   AssetGenImage get icError => const AssetGenImage('assets/icons/ic_error.png');
 
@@ -85,6 +105,11 @@ class $AssetsIconsGen {
     icCheckCircle,
     icDownArrow,
     icDownDropDownArrow,
+    icDrawer1,
+    icDrawer2,
+    icDrawer3,
+    icDrawer4,
+    icDrawer5,
     icError,
     icFeedback,
     icFilter,
