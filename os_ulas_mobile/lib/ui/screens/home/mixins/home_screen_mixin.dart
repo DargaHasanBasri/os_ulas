@@ -8,6 +8,7 @@ mixin HomeScreenMixin<T extends StatefulWidget> on State<T> {
   TextEditingController searchTextEditingController = TextEditingController();
 
   final GlobalKey<TooltipState> feedbackTooltipKey = GlobalKey<TooltipState>();
+  final GlobalKey<ScaffoldState> scaffoldKey  = GlobalKey<ScaffoldState>();
 
   final LatLng osmaniyeCenter = const LatLng(37.0745, 36.2466);
 

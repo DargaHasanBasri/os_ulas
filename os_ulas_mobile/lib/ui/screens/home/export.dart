@@ -17,3 +17,6 @@ export 'package:os_ulas_mobile/ui/screens/home/mixins/home_navigation_mixin.dart
 export 'package:os_ulas_mobile/ui/screens/home/components/custom_bottom_navigation_bar.dart';
 export 'package:os_ulas_mobile/ui/screens/home/components/custom_search_bar.dart';
 export 'package:os_ulas_mobile/utils/extensions/string_localizations.dart';
+export 'package:os_ulas_mobile/ui/screens/home/components/custom_drawer.dart';
+export 'package:os_ulas_mobile/ui/widgets/custom_horizontal_divider.dart';
+export 'package:os_ulas_mobile/ui/screens/home/components/custom_drawer_item.dart';

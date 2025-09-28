@@ -17,12 +17,14 @@ class _HomeScreenState extends State<HomeScreen> with HomeScreenMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scaffoldKey,
       extendBody: true,
+      drawer: CustomDrawer(),
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.tertiary,
-        title: appBarTitle(),
-        leading: appBarLeading(),
-        actions: appBarActions(),
+        title: _appBarTitle(),
+        leading: _appBarLeading(),
+        actions: _appBarActions(),
       ),
       bottomNavigationBar: CustomBottomNavBar(),
       body: Stack(
@@ -56,7 +58,7 @@ class _HomeScreenState extends State<HomeScreen> with HomeScreenMixin {
     );
   }
 
-  Widget appBarTitle() {
+  Widget _appBarTitle() {
     return RichText(
       textAlign: TextAlign.center,
       text: TextSpan(
@@ -81,16 +83,18 @@ class _HomeScreenState extends State<HomeScreen> with HomeScreenMixin {
     );
   }
 
-  Widget appBarLeading() {
+  Widget _appBarLeading() {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        scaffoldKey.currentState?.openDrawer();
+      },
       child: Assets.icons.icMenu.image(
         package: AppConstants.genPackageName,
       ),
     );
   }
 
-  List<Widget> appBarActions() {
+  List<Widget> _appBarActions() {
     return <Widget>[
       Padding(
         padding: AppPaddings.smallRight,
