@@ -28,6 +28,9 @@ dependencies:
   # Permissions
   permission_handler: ^12.0.1
 
+  # Router
+  go_router: ^16.0.0
+
   # Utilities
   hive: ^2.2.3
   image_picker: ^1.1.2
