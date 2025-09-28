@@ -58,6 +58,9 @@ class ColorName {
   /// Color: #9CA3AF
   static const Color santaGrey = Color(0xFF9CA3AF);
 
+  /// Color: #F0F0F0
+  static const Color seashell = Color(0xFFF0F0F0);
+
   /// Color: #CACACA
   static const Color silver = Color(0xFFCACACA);
 
